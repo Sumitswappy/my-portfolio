@@ -1,61 +1,69 @@
-🌐 My Portfolio Website
+# 🌐 My Portfolio Website  
 
-A personal portfolio website built with Next.js 15, TypeScript, and Tailwind CSS.
-It showcases my skills, projects, and contact information in a clean and modern UI.
+A **personal portfolio website** built with **Next.js 15**, **TypeScript**, and **Tailwind CSS**.  
+It highlights my **skills, projects, and contact information** in a clean and modern design.  
 
-🚀 Features
+---
 
-⚡ Built with Next.js (App Router)
+## 🚀 Features  
 
-🎨 Styled using Tailwind CSS
+- ⚡ Built with **Next.js (App Router)**  
+- 🎨 Styled using **Tailwind CSS**  
+- 📱 Mobile-first & fully responsive design  
+- 📂 Sections included: **Projects, Skills, About Me, Contact**  
+- 🖼️ Resume and profile image support  
 
-📱 Fully responsive design
+---
 
-📂 Projects, Skills, About Me, and Contact sections
+## 🛠️ Tech Stack  
 
-🖼️ Resume and profile image included
+- **Frontend Framework:** Next.js (React + TypeScript)  
+- **Styling:** Tailwind CSS  
+- **Package Manager:** npm  
+- **Deployment:** Vercel (recommended)  
 
-🛠️ Tech Stack
+---
 
-Frontend Framework: Next.js (React + TypeScript)
+## 📦 Installation & Setup  
 
-Styling: Tailwind CSS
+Run this project locally in a few simple steps:
 
-Package Manager: npm
 
-Deployment: Vercel (recommended)
-
-📦 Installation & Setup
-
-Follow these steps to run the project locally:
-
-1️⃣ Clone the repository
+## 1️⃣ Clone the repository
 git clone https://github.com/your-username/my-portfolio.git
 cd my-portfolio
 
-2️⃣ Install dependencies
+## 2️⃣ Install dependencies
 npm install
 
-3️⃣ Run the development server
+## 3️⃣ Run the development server
 npm run dev
 
 
 Then open http://localhost:3000
  in your browser.
 
-4️⃣ Build for production
+## 4️⃣ Build for production
 npm run build
 npm start
 
-📂 Project Structure
+## 📂 Project Structure
+
 my-portfolio/
-│-- app/              # Next.js App Router pages & layout
-│-- components/       # Reusable UI components
-│-- public/           # Static assets (images, resume, icons)
-│-- styles/           # Global CSS & Tailwind configs
-│-- package.json      # Project dependencies & scripts
-│-- tsconfig.json     # TypeScript configuration
-│-- tailwind.config.ts # Tailwind configuration
+
+├── app/ # Next.js App Router pages & layout
+
+├── components/ # Reusable UI components
+
+├── public/ # Static assets (images, resume, icons)
+
+├── styles/ # Global CSS & Tailwind configs
+
+├── package.json # Project dependencies & scripts
+
+├── tsconfig.json # TypeScript configuration
+
+└── tailwind.config.ts # Tailwind configuration
 
 🌍 Deployment
 
