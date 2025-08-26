@@ -1,0 +1,21 @@
+
+.react-clock {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.react-clock__face {
+  border-color: #888888; 
+}
+
+.react-clock__hand__body {
+  background-color: #f2f2f2 !important; 
+}
+
+.react-clock__mark__body {
+  background-color: #888888 !important; 
+}
+
+.react-clock__second-hand__body {
+  background-color: #C778DD !important; 
+}
