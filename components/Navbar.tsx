@@ -89,7 +89,6 @@ const Navbar = () => {
               </Link>
             ))}
             <span
-              // --- Changed bottom-0 to bottom-1 here ---
               className="absolute bottom-9 h-3 rounded-full bg-red-400 transition-all duration-300 ease-in-out
                w-[var(--underline-width,0)] left-[var(--underline-left,0)] opacity-[var(--underline-opacity,0)]"
             />
