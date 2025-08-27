@@ -79,9 +79,9 @@ Deploy instantly with one click.
 🙋 Author
 
 👤 Sumit Sarkar
-📧 Email: your-sumitsarkar11598@gmail.com
+📧 Email: sumitsarkar11598@gmail.com
 
-🔗 Portfolio: Your Website
+🔗 Portfolio: [My-Portfolio](https://my-portfolio-tau-seven-73.vercel.app/)
 
 💼 LinkedIn: www.linkedin.com/in/sumit-sarkar-0229b4222
 
