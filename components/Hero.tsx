@@ -13,9 +13,9 @@ const Hero = () => {
             sequence={[
               'I am a tech enthusiast!',
               3500,
-              'I am a full-stack developer!',
+              'I am a full-stack engineer!',
               3500,
-              'I am a painter!',
+              'I am a web developer!',
               3500,
             ]}
             wrapper="h1"

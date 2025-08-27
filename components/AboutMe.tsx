@@ -10,7 +10,7 @@ const AboutMe = () => {
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
         <div className="space-y-4 text-text-dark">
           <p>
-            Hello, I’m Sumit! I'm a final-year MCA student at KIIT University with a passion for building impactful solutions.
+            Hello, I&apos;m Sumit! I&apos;m a final-year MCA student at KIIT University with a passion for building impactful solutions.
           </p>
           <p>
             I am skilled in Java, Spring Boot, SQL, and React, with hands-on experience developing scalable REST APIs and full-stack applications. I have a solid foundation in Object-Oriented Programming and Data Structures.

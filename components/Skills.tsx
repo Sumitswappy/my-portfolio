@@ -5,7 +5,6 @@ import {
   FaReact,
   FaGithub,
   FaAws,
-  FaDocker,
 } from 'react-icons/fa6';
 import { FaCog } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
