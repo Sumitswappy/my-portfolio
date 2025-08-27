@@ -30,7 +30,7 @@ Run this project locally in a few simple steps:
 
 
 ## 1️⃣ Clone the repository
-git clone https://github.com/your-username/my-portfolio.git
+git clone https://github.com/Sumitswappy/my-portfolio.git
 cd my-portfolio
 
 ## 2️⃣ Install dependencies
