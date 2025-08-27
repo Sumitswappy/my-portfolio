@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'Student Academic Portal',
     description: 'A role-based academic management system with secure JWT authentication and modules for enrollment, grades, and fees.',
-    image: '/project-academic.jpg',
+    image: '/SAP.jpg',
     year: '2024',
     link: '#', 
   },
@@ -19,7 +19,7 @@ const projects = [
    {
     title: 'My Portfolio',
     description: 'A personal portfolio website showcasing my projects, skills, and experience, built with Next.js and styled with TailwindCSS.',
-    image: '/project-portfolio.jpg',
+    image: '/Portfolio.jpg',
     year: '2023',
     link: '#',
   },

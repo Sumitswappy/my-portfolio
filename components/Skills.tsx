@@ -6,93 +6,69 @@ import {
   FaGithub,
   FaAws,
 } from 'react-icons/fa6';
-import { FaCog } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
 import {
   SiSpringboot,
+  SiHibernate,
   SiPostman,
   SiSap,
   SiNextdotjs,
 } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 
-const skillsData = {
-  languages: [
-    { name: 'Java', icon: <FaJava size={20} /> },
-    { name: 'Python', icon: <FaPython size={20} /> },
-    { name: 'SQL', icon: <FaDatabase size={20} /> },
-    { name: 'JavaScript', icon: <IoLogoJavascript size={20} /> },
-    { name: 'SAP ABAP', icon: <SiSap size={20} /> },
-  ],
-  frameworks: [
-    { name: 'Spring Boot', icon: <SiSpringboot size={20} /> },
-    { name: 'React.js', icon: <FaReact size={20} /> },
-    { name: 'Next.js', icon: <SiNextdotjs size={20} /> },
-    { name: 'REST APIs', icon: <TbApi size={20} /> },
-  ],
-  'tools & platforms': [
-    { name: 'GitHub', icon: <FaGithub size={20} /> },
-    { name: 'AWS', icon: <FaAws size={20} /> },
-    { name: 'Postman', icon: <SiPostman size={20} /> },
-  ],
-};
+
+// Updated data structure with icon components and their brand colors
+const allSkills = [
+  { name: 'Java', icon: FaJava, color: 'text-[#F89820]' },
+  { name: 'Python', icon: FaPython, color: 'text-[#3776AB]' },
+  { name: 'SQL', icon: FaDatabase, color: 'text-accent' }, // Kept accent for generic icon
+  { name: 'JavaScript', icon: IoLogoJavascript, color: 'text-[#F7DF1E]' },
+  { name: 'SAP ABAP', icon: SiSap, color: 'text-[#008FD3]' },
+  { name: 'Spring Boot', icon: SiSpringboot, color: 'text-[#6DB33F]' },
+  { name: 'React.js', icon: FaReact, color: 'text-[#61DAFB]' },
+  { name: 'Next.js', icon: SiNextdotjs, color: 'text-text-light' }, // White for Next.js logo
+  { name: 'REST APIs', icon: TbApi, color: 'text-accent' },
+  { name: 'Hibernate', icon: SiHibernate, color: 'text-[#59666C]' },
+  { name: 'GitHub', icon: FaGithub, color: 'text-text-light' }, // White for GitHub logo
+  { name: 'AWS', icon: FaAws, color: 'text-[#FF9900]' },
+  { name: 'Postman', icon: SiPostman, color: 'text-[#FF6C37]' },
+];
 
 const conceptsData = ['OOP', 'Data Structures', 'Agile', 'SDLC', 'Networking (CCNA)'];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-16">
-      <h2 className="mb-12 flex items-center gap-4 text-3xl font-bold uppercase tracking-wider text-text-light">
-        <FaCog className="text-accent" />
-        <span>Skills</span>
-      </h2>
+    <section id="skills" className="py-24">
+      <div className="text-center">
+        <p className="font-mono text-sm uppercase text-text-dark">My Skills</p>
+        <h2 className="text-4xl font-bold tracking-tight text-text-light sm:text-5xl">
+          The Spice <span className="text-accent">Box</span>
+        </h2>
+      </div>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-        <div className="border border-border-gray">
-          <h3 className="border-b border-border-gray p-2 font-semibold">Languages</h3>
-          <div className="space-y-2 p-4">
-            {skillsData.languages.map((skill, i) => (
-              <div key={i} className="flex items-center gap-2 text-text-dark">
-                <span className="text-accent">{skill.icon}</span>
-                <span>{skill.name}</span>
-              </div>
-            ))}
+      <div className="mx-auto mt-12 flex max-w-4xl flex-wrap justify-center gap-4">
+        {allSkills.map(({ name, icon: IconComponent, color }, i) => (
+          <div
+            key={i}
+            className="flex items-center gap-3 rounded-lg border border-border-gray bg-main-gray/50 px-4 py-2 transition-all duration-300 hover:border-accent hover:bg-main-gray"
+          >
+            {/* The span now gets its color from the data object */}
+            <span className={`text-2xl ${color}`}>
+              <IconComponent />
+            </span>
+            <span className="text-text-light">{name}</span>
           </div>
-        </div>
+        ))}
+      </div>
 
-        <div className="border border-border-gray">
-          <h3 className="border-b border-border-gray p-2 font-semibold">Frameworks</h3>
-          <div className="space-y-2 p-4">
-            {skillsData.frameworks.map((skill, i) => (
-              <div key={i} className="flex items-center gap-2 text-text-dark">
-                <span className="text-accent">{skill.icon}</span>
-                <span>{skill.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        <div className="border border-border-gray">
-          <h3 className="border-b border-border-gray p-2 font-semibold">Concepts</h3>
-          <div className="space-y-2 p-4">
-            {conceptsData.map((concept, i) => (
-              <div key={i} className="text-text-dark">
-                <span>{concept}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        <div className="border border-border-gray">
-          <h3 className="border-b border-border-gray p-2 font-semibold">Tools & Platforms</h3>
-          <div className="space-y-2 p-4">
-            {skillsData['tools & platforms'].map((skill, i) => (
-              <div key={i} className="flex items-center gap-2 text-text-dark">
-                <span className="text-accent">{skill.icon}</span>
-                <span>{skill.name}</span>
-              </div>
-            ))}
-          </div>
+      <div className="mt-16 text-center">
+        <h3 className="text-2xl font-bold text-text-light">Core Concepts</h3>
+        <div className="mx-auto mt-4 flex max-w-3xl flex-wrap justify-center gap-x-6 gap-y-2">
+          {conceptsData.map((concept, i) => (
+            <span key={i} className="text-text-dark">
+              {concept}
+            </span>
+          ))}
         </div>
       </div>
     </section>

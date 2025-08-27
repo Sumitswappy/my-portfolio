@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 left-0 z-40 w-full bg-background/95 backdrop-blur-lg py-4 md:relative md:py-8 border-t border-border-gray">
+    <footer className=" bottom-0 left-0 z-40 w-full bg-background/95 backdrop-blur-lg py-4 md:relative md:py-8 border-t border-border-gray">
       <div className="container mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-4 md:flex-row">
         <div className="text-center md:text-left">
           <p className="text-lg font-semibold">Sumit Sarkar</p>
