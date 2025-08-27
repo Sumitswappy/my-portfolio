@@ -79,10 +79,10 @@ Deploy instantly with one click.
 🙋 Author
 
 👤 Sumit Sarkar
-📧 Email: your-email@example.com
+📧 Email: your-sumitsarkar11598@gmail.com
 
 🔗 Portfolio: Your Website
 
-💼 LinkedIn: Your LinkedIn
+💼 LinkedIn: www.linkedin.com/in/sumit-sarkar-0229b4222
 
 ⚡ Feel free to fork this repo and customize it for your own portfolio!
