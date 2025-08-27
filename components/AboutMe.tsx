@@ -1,12 +1,14 @@
 import Image from 'next/image';
-import profileImage from '/public/profile.jpeg'; 
+// Corrected the import path to be relative
+import profileImage from '../public/profile.jpeg'; 
 
 const AboutMe = () => {
   return (
     <section id="about-me" className="py-16">
-       <h2 className="text-3xl font-bold uppercase tracking-wider text-text-light">
-              Personal-info
-            </h2>
+      {/* Added mb-12 (margin-bottom) to create a gap */}
+      <h2 className="mb-12 text-3xl font-bold uppercase tracking-wider text-text-light">
+        Personal-info
+      </h2>
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
         <div className="space-y-4 text-text-dark">
           <p>
@@ -21,7 +23,7 @@ const AboutMe = () => {
         </div>
 
         <div
-          className="relative w-full max-w-[350px] mx-auto rounded-full border-3 border-border-gray overflow-hidden"
+          className="relative w-full max-w-[350px] mx-auto border border-border-gray overflow-hidden"
           style={{ aspectRatio: `${profileImage.width} / ${profileImage.height}` }}
         >
           <Image
@@ -31,7 +33,6 @@ const AboutMe = () => {
             className="object-contain"
           />
         </div>
-        
       </div>
     </section>
   );

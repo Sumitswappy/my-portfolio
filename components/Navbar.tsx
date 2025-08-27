@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { FaRegCalendarAlt, FaRegClock } from 'react-icons/fa';
+import { FaRegCalendarAlt, FaRegClock, FaBars, FaTimes } from 'react-icons/fa';
 
 const navLinks = [
   { href: '#projects', label: '#Projects' },
@@ -15,6 +15,7 @@ const Navbar = () => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [hasScrolled, setHasScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -45,7 +46,6 @@ const Navbar = () => {
   useEffect(() => {
     const activeLinkEl = navRef.current?.querySelector(`[href="${activeSection}"]`) as HTMLElement;
     const navNode = navRef.current;
-
     if (navNode && activeLinkEl) {
       navNode.style.setProperty('--underline-width', `${activeLinkEl.offsetWidth}px`);
       navNode.style.setProperty('--underline-left', `${activeLinkEl.offsetLeft}px`);
@@ -55,56 +55,65 @@ const Navbar = () => {
     }
   }, [activeSection]);
 
-
   const dateOptions: Intl.DateTimeFormatOptions = { weekday: 'short', month: 'short', day: 'numeric' };
   const timeOptions: Intl.DateTimeFormatOptions = { hour: '2-digit', minute: '2-digit', hour12: true };
 
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        hasScrolled
-          ? 'border-b border-border-gray bg-background/80 backdrop-blur-sm'
+        hasScrolled || isMenuOpen
+          ? 'border-b border-border-gray bg-background/95 backdrop-blur-sm'
           : 'border-b border-transparent'
       }`}
     >
       <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
-        <Link href="/" className="font-mono text-xl font-bold">
-          <span className="text-accent">S</span>umit <span className="text-accent">S</span>arkar
-        </Link>
-        <div className="flex items-center gap-6">
+        <div className="flex flex-shrink-0 items-center gap-4">
+          <Link href="/" className="font-mono text-xl font-bold">
+            <span className="text-accent">S</span>umit <span className="text-accent">S</span>arkar
+          </Link>
           
-          <nav
-            ref={navRef}
-            className="relative hidden space-x-1 font-mono text-text-dark md:block"
-          >
+          {/* Updated Clock visibility and size */}
+          <div className=" items-center gap-2 border-l border-border-gray pl-4 text-xs text-text-dark flex" suppressHydrationWarning>
+            <div className='text-left'>
+              <div className="flex items-center gap-2"><FaRegCalendarAlt className="text-accent" /><span>{currentDateTime.toLocaleDateString('en-US', dateOptions)}</span></div>
+              <div className="flex items-center gap-2"><FaRegClock className="text-accent" /><span>{currentDateTime.toLocaleTimeString('en-US', timeOptions)}</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center">
+          {/* Desktop Navigation */}
+          <nav ref={navRef} className="relative hidden space-x-1 font-mono text-text-dark md:block">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`relative px-3 py-2 transition-colors duration-300 ${
-                  activeSection === link.href ? 'text-text-light' : ''
-                }`}
-              >
+              <Link key={link.href} href={link.href} className={`relative px-3 py-2 transition-colors duration-300 ${activeSection === link.href ? 'text-text-light' : ''}`}>
                 {link.label}
               </Link>
             ))}
-            <span
-              className="absolute bottom-9 h-3 rounded-full bg-red-400 transition-all duration-300 ease-in-out
-               w-[var(--underline-width,0)] left-[var(--underline-left,0)] opacity-[var(--underline-opacity,0)]"
-            />
+            <span className="absolute bottom-9 h-3 rounded-full bg-red-400 transition-all duration-300 ease-in-out w-[var(--underline-width,0)] left-[var(--underline-left,0)] opacity-[var(--underline-opacity,0)]" />
           </nav>
-          
-        </div>
-        <div className="hidden items-center gap-4 text-sm text-text-dark lg:flex">
-            <div className="flex items-center gap-2">
-              <FaRegCalendarAlt className="text-accent" />
-              <span>{currentDateTime.toLocaleDateString('en-US', dateOptions)}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaRegClock className="text-accent" />
-              <span>{currentDateTime.toLocaleTimeString('en-US', timeOptions)}</span>
-            </div>
+          {/* Mobile Menu Button */}
+          <div className="flex items-center md:hidden">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-2xl text-text-light">
+              {isMenuOpen ? <FaTimes /> : <FaBars />}
+            </button>
           </div>
+        </div>
+      </div>
+
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${
+          isMenuOpen ? 'max-h-96' : 'max-h-0'
+        }`}
+      >
+        <div className="border-t border-border-gray bg-background/80 backdrop-blur-xl">
+          <nav className="flex flex-col items-center gap-4 py-4 font-mono">
+            {navLinks.map((link) => (
+              <Link key={link.href} href={link.href} onClick={() => setIsMenuOpen(false)} className={`px-3 py-2 ${activeSection === link.href ? 'text-accent' : 'text-text-dark'}`}>
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
     </header>
   );
