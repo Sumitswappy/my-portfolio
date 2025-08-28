@@ -43,7 +43,7 @@ const Contact = () => {
           Get In Touch
         </h2>
         <p className="mt-2 text-lg text-red-400">
-          Let's Work Together
+          Let&apos;s Work Together
         </p>
 
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
