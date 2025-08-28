@@ -51,7 +51,7 @@ const Hero = () => {
         </div>
         <div className="relative flex h-[400px] w-full items-end justify-center">
           <div className="absolute bottom-0 h-[340px] w-[340px] rounded-full border-[10px] border-[#E0FBFF] z-10 shadow-[0_0_50px_#00DEF7]"></div>
-          <div className="relative z-20">
+          <div className="relative z-20 rounded-full overflow-hidden shadow-lg ml-3 mr-5">
             <Image
               src="/sumit.png"
               alt="Sumit Sarkar"
