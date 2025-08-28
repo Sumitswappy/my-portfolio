@@ -20,7 +20,7 @@ const projects = [
     title: 'My Portfolio',
     description: 'A personal portfolio website showcasing my projects, skills, and experience, built with Next.js and styled with TailwindCSS.',
     image: '/Portfolio.jpg',
-    year: '2023',
+    year: '2025',
     link: '#',
   },
 ];
