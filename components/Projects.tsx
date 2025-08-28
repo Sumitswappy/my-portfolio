@@ -7,21 +7,21 @@ const projects = [
     description: 'A role-based academic management system with secure JWT authentication and modules for enrollment, grades, and fees.',
     image: '/SAP.jpg',
     year: '2024',
-    link: '#', 
+    link: 'https://github.com/sumanulto/sapportal', 
   },
   {
     title: 'Unifind',
     description: 'A college discovery platform allowing students to search and compare over 100 colleges, featuring a 30% query performance optimization.',
     image: '/unifind.jpeg',
     year: '2023',
-    link: '#',
+    link: 'https://github.com/Sumitswappy/MinorProject',
   },
    {
     title: 'My Portfolio',
     description: 'A personal portfolio website showcasing my projects, skills, and experience, built with Next.js and styled with TailwindCSS.',
     image: '/Portfolio.jpg',
     year: '2025',
-    link: '#',
+    link: 'https://github.com/Sumitswappy/my-portfolio',
   },
 ];
 
