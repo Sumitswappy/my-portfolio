@@ -4,10 +4,13 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { FaRegCalendarAlt, FaRegClock, FaBars, FaTimes } from 'react-icons/fa';
 
+// Correct order of navLinks to match page layout
 const navLinks = [
+  { href: '#about-me', label: '#About-me' },
   { href: '#projects', label: '#Projects' },
   { href: '#skills', label: '#Skills' },
-  { href: '#about-me', label: '#About-me' },
+  { href: '#certifications', label: '#Certifications' },
+  { href: '#academics', label: '#Academics' },
   { href: '#contact', label: '#Contact' },
 ];
 
@@ -16,32 +19,60 @@ const Navbar = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    setIsClient(true);
     const timer = setInterval(() => setCurrentDateTime(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
 
+  // --- FINAL HYBRID SCROLL DETECTION LOGIC ---
   useEffect(() => {
+    // 1. IntersectionObserver for general section detection
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // We only set the section if we are NOT at the top of the page
+            if (window.scrollY > 150) {
+              setActiveSection(`#${entry.target.id}`);
+            }
+          }
+        });
+      },
+      {
+        rootMargin: '-40% 0px -60% 0px', // Trigger line in the upper-middle of the screen
+      }
+    );
+
+    navLinks.forEach((link) => {
+      const section = document.querySelector(link.href);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    // 2. Manual scroll listener for the "top of page" case and scroll styling
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 10);
-      let currentActive = '';
-      for (let i = navLinks.length - 1; i >= 0; i--) {
-        const link = navLinks[i];
-        const section = document.querySelector(link.href) as HTMLElement;
-        if (section && section.offsetTop <= window.scrollY + 150) {
-          currentActive = link.href;
-          break;
-        }
+      // If user is near the top, force the active section to be empty
+      if (window.scrollY < 150) {
+        setActiveSection('');
       }
-      setActiveSection(currentActive);
     };
-
+    
     window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    handleScroll(); // Run on mount
+
+    // Cleanup function
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
+
 
   useEffect(() => {
     const activeLinkEl = navRef.current?.querySelector(`[href="${activeSection}"]`) as HTMLElement;
@@ -72,17 +103,17 @@ const Navbar = () => {
             <span className="text-accent">S</span>umit <span className="text-accent">S</span>arkar
           </Link>
           
-          {/* Updated Clock visibility and size */}
-          <div className=" items-center gap-2 border-l border-border-gray pl-4 text-xs text-text-dark flex" suppressHydrationWarning>
-            <div className='text-left'>
-              <div className="flex items-center gap-2"><FaRegCalendarAlt className="text-accent" /><span>{currentDateTime.toLocaleDateString('en-US', dateOptions)}</span></div>
-              <div className="flex items-center gap-2"><FaRegClock className="text-accent" /><span>{currentDateTime.toLocaleTimeString('en-US', timeOptions)}</span></div>
+          {isClient && (
+            <div className=" items-center gap-2 border-l border-border-gray pl-4 text-xs text-text-dark sm:flex">
+              <div className='text-left'>
+                <div className="flex items-center gap-2"><FaRegCalendarAlt className="text-accent" /><span>{currentDateTime.toLocaleDateString('en-US', dateOptions)}</span></div>
+                <div className="flex items-center gap-2"><FaRegClock className="text-accent" /><span>{currentDateTime.toLocaleTimeString('en-US', timeOptions)}</span></div>
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         <div className="flex items-center">
-          {/* Desktop Navigation */}
           <nav ref={navRef} className="relative hidden space-x-1 font-mono text-text-dark md:block">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className={`relative px-3 py-2 transition-colors duration-300 ${activeSection === link.href ? 'text-text-light' : ''}`}>
@@ -91,7 +122,6 @@ const Navbar = () => {
             ))}
             <span className="absolute bottom-9 h-3 rounded-full bg-red-400 transition-all duration-300 ease-in-out w-[var(--underline-width,0)] left-[var(--underline-left,0)] opacity-[var(--underline-opacity,0)]" />
           </nav>
-          {/* Mobile Menu Button */}
           <div className="flex items-center md:hidden">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-2xl text-text-light">
               {isMenuOpen ? <FaTimes /> : <FaBars />}

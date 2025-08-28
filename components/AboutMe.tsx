@@ -6,8 +6,8 @@ const AboutMe = () => {
   return (
     <section id="about-me" className="py-16">
       {/* Added mb-12 (margin-bottom) to create a gap */}
-      <h2 className="mb-12 text-3xl font-bold uppercase tracking-wider text-text-light">
-        Personal-info
+      <h2 className="text-4xl font-bold tracking-tight text-text-light sm:text-5xl">
+        More About me
       </h2>
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
         <div className="space-y-4 text-text-dark">
