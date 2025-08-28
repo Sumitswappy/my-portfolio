@@ -81,7 +81,7 @@ Deploy instantly with one click.
 👤 Sumit Sarkar
 📧 Email: sumitsarkar11598@gmail.com
 
-🔗 Portfolio: [My-Portfolio](https://my-portfolio-tau-seven-73.vercel.app/)
+🔗 Portfolio: [My-Portfolio](https://sumit-sarkar.netlify.app/)
 
 💼 LinkedIn: www.linkedin.com/in/sumit-sarkar-0229b4222
 
