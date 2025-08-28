@@ -28,7 +28,6 @@ const allSkills = [
   { name: 'React.js', icon: FaReact, color: 'text-[#61DAFB]' },
   { name: 'Next.js', icon: SiNextdotjs, color: 'text-text-light' }, // White for Next.js logo
   { name: 'REST APIs', icon: TbApi, color: 'text-accent' },
-  { name: 'Hibernate', icon: SiHibernate, color: 'text-[#59666C]' },
   { name: 'GitHub', icon: FaGithub, color: 'text-text-light' }, // White for GitHub logo
   { name: 'AWS', icon: FaAws, color: 'text-[#FF9900]' },
   { name: 'Postman', icon: SiPostman, color: 'text-[#FF6C37]' },

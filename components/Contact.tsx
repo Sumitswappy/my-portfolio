@@ -1,16 +1,16 @@
 import { 
-  FaPhone, 
   FaEnvelope, 
   FaMapMarkerAlt, 
   FaShareAlt,
   FaLinkedin,
   FaGithub 
 } from 'react-icons/fa';
+import { FiPhone } from 'react-icons/fi'; // 1. Replaced FaPhone with FiPhone
 import Link from 'next/link';
 
 const contactDetails = [
   {
-    icon: <FaPhone />,
+    icon: <FiPhone />, // 2. Used the new icon here
     title: 'Phone & Mobile',
     details: ['(+91) 7980794966'],
   },
@@ -43,7 +43,7 @@ const Contact = () => {
           Get In Touch
         </h2>
         <p className="mt-2 text-lg text-red-400">
-          Let&apos;s Work Together
+          Let's Work Together
         </p>
 
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -70,15 +70,12 @@ const Contact = () => {
                     ) : null
                   )
                 ) : (
-                  
                   item.details
                     .filter((detail): detail is string => typeof detail === 'string')
                     .map((detail, i) => (
                       <p key={i}>{detail}</p>
                     ))
                 )}
-                
-                
               </div>
             </div>
           ))}

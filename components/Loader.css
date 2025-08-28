@@ -1,0 +1,33 @@
+/* Flickering text animation */
+.flicker-text {
+  animation: flicker 1.5s linear infinite;
+  text-shadow:
+    0 0 10px #00DEF7,
+    0 0 20px #00DEF7;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+  }
+}
+
+/* Styles for the circular SVG progress meter */
+.hud-circle-bg {
+  fill: none;
+  stroke: #2d2d2d; /* border-gray */
+  stroke-width: 4;
+}
+
+.hud-circle-progress {
+  fill: none;
+  stroke: #58eeff; /* Bright cyan color from your Hero image glow */
+  stroke-width: 4;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.1s linear;
+}

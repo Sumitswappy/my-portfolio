@@ -23,7 +23,7 @@ const AboutMe = () => {
         </div>
 
         <div
-          className="relative w-full max-w-[350px] mx-auto border border-border-gray overflow-hidden"
+          className="relative w-full max-w-[350px] mx-auto rounded-full border-[5px] border-border-gray overflow-hidden"
           style={{ aspectRatio: `${profileImage.width} / ${profileImage.height}` }}
         >
           <Image
