@@ -39,10 +39,10 @@ const Background = () => {
     },
     particles: {
       color: {
-        value: '#ffffffff', 
+        value: '#ffffffc5', 
       },
       links: {
-        color: '#808080ff',
+        color: '#b5f8fca7',
         distance: 150,
         enable: true,
         opacity: 0.5,
@@ -71,7 +71,7 @@ const Background = () => {
         value: 0.5,
       },
       shape: {
-        type: 'circle',
+        type: 'triangle',
       },
       size: {
         value: { min: 1, max: 3 },
