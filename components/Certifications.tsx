@@ -3,6 +3,14 @@ import Link from 'next/link'; // 1. Import the Link component
 // 2. Added a 'link' property to each certification
 const certificationsData = [
   {
+    name: 'Managing Clean Core for SAP S/4HANA Cloud - Record of Achievement',
+    issuer: 'SAP',
+    date: 'Aug 2025',
+    icon: SiSap,
+    color: 'text-[#008FD3]',
+    link: 'https://www.credly.com/badges/30b6e9a4-7e54-4c1e-892f-59c685ff4f2c/linked_in_profile', // ==> REPLACE with your actual URL
+  },
+   {
     name: 'Exploring SAP Business Technology Platform',
     issuer: 'SAP',
     date: 'Aug 2025',
