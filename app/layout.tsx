@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Inter, Fira_Code } from 'next/font/google';
 import './globals.css';
 import Loader from '@/components/Loader';
+import CustomCursor from '@/components/CustomCursor';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -29,6 +30,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         className={`${inter.variable} ${firaCode.variable} bg-background font-sans text-text-light`}
       >
+         <div className="hidden md:block">
+          <CustomCursor />
+        </div>
         <AnimatePresence mode="wait">
           {isLoading ? (
             <motion.div key="loader">

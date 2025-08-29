@@ -1,15 +1,15 @@
 const academicsData = [
   {
-    university: 'Kalinga Institute of Industrial Technology',
-    degree: 'Masters of Computer Application',
+    university: 'Kalinga Institute of Industrial Technology University',
+    degree: 'Masters of Computer Applications',
     dates: 'Sept 2024 - Aug 2026',
     grade: 'CGPA: 9.10',
   },
   {
     university: 'Techno India College of Technology',
-    degree: 'Bachelors of Computer Application',
+    degree: 'Bachelors of Computer Applications',
     dates: 'Sept 2021 - July 2024',
-    grade: 'CGPA: 8.85',
+    grade: 'CGPA: 8.80',
   },
   {
     university: 'Sunrise English Medium School',
@@ -21,7 +21,7 @@ const academicsData = [
 
 const Academics = () => {
   return (
-    <section id="academics" className="py-24">
+    <section id="academics" className="py-38 md:py-24">
       <div className="container mx-auto max-w-3xl px-4">
         <h2 className="mb-16 text-center text-4xl font-bold tracking-tight text-text-light sm:text-5xl">
           My Journey

@@ -27,7 +27,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-16 md:py-24">
+    <section id="projects" className="py-38 md:py-24">
       <div className="mb-12">
         {/* Header stacks and centers on mobile */}
         <div className="flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">

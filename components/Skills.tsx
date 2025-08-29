@@ -37,11 +37,11 @@ const conceptsData = ['OOP', 'Data Structures', 'Agile', 'SDLC', 'Networking (CC
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24">
+    <section id="skills" className="py-38 md:py-24">
       <div className="text-center">
         <p className="font-mono text-sm uppercase text-text-dark">My Skills</p>
         <h2 className="text-4xl font-bold tracking-tight text-text-light sm:text-5xl">
-          The Spice <span className="text-accent">Box</span>
+          My Tool <span className="text-accent">Box</span>
         </h2>
       </div>
 
@@ -60,7 +60,7 @@ const Skills = () => {
         ))}
       </div>
 
-      <div className="mt-16 text-center">
+      <div className="mt-24 text-center">
         <h3 className="text-2xl font-bold text-text-light">Core Concepts</h3>
         <div className="mx-auto mt-4 flex max-w-3xl flex-wrap justify-center gap-x-6 gap-y-2">
           {conceptsData.map((concept, i) => (

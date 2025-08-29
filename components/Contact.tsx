@@ -36,7 +36,7 @@ const contactDetails = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative overflow-hidden py-24">
+    <section id="contact" className="relative overflow-hidden py-38 md:py-24">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[60%] bg-gradient-to-tr from-background via-accent/30 to-background rounded-full blur-3xl -z-10"></div>
       <div className="container mx-auto max-w-5xl px-4 text-center">
         <h2 className="text-4xl font-extrabold uppercase tracking-widest text-text-light">

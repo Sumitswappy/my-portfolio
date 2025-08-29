@@ -1,18 +1,17 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { TypeAnimation } from 'react-type-animation'; // 1. Import the animation library
 import './Loader.css';
 
 const Loader = () => {
   const [progress, setProgress] = useState(0);
-  const [isMounted, setIsMounted] = useState(false); // New state to track if component is mounted
+  const [isMounted, setIsMounted] = useState(false);
 
-  // This effect runs once on the client to confirm the component is mounted
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  // This effect starts the timer ONLY after the component has mounted
   useEffect(() => {
     if (isMounted) {
       const timer = setInterval(() => {
@@ -29,7 +28,7 @@ const Loader = () => {
         clearInterval(timer);
       };
     }
-  }, [isMounted]); // The dependency on isMounted is key
+  }, [isMounted]);
 
   const radius = 40;
   const circumference = 2 * Math.PI * radius;
@@ -56,9 +55,19 @@ const Loader = () => {
         </svg>
       </div>
 
-      <p className="flicker-text mt-8 font-mono text-2xl uppercase tracking-widest">
-        Processing...
-      </p>
+      {/* 2. Replaced the <p> tag with the TypeAnimation component */}
+      <TypeAnimation
+        sequence={[
+          'Getting things ready...',
+          1000,
+          'Finalizing...',
+          1000,
+        ]}
+        wrapper="p"
+        speed={70}
+        className="mt-8 font-sans text-2xl uppercase tracking-widest text-text-light"
+        repeat={Infinity}
+      />
     </div>
   );
 };

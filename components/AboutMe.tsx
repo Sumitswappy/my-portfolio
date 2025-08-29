@@ -4,11 +4,22 @@ import profileImage from '../public/profile.jpeg';
 
 const AboutMe = () => {
   return (
-    <section id="about-me" className="py-16">
-      {/* Added mb-12 (margin-bottom) to create a gap */}
-      <h2 className="text-4xl font-bold tracking-tight text-text-light sm:text-5xl">
-        More About me
-      </h2>
+    <section id="about-me" className="py-38 md:py-24">
+      
+      {/* --- NEW STYLISH HEADER --- */}
+      <div className="mb-8">
+        <p className="font-mono text-sm uppercase tracking-widest text-text-dark">
+          More About Me
+        </p>
+        <h2 className="mt-2 text-4xl font-bold tracking-tight text-text-light sm:text-5xl">
+          <span>I&apos;m Sumit, a</span>
+          <span className="block bg-gradient-to-r from-blue-900 to-sky-400 bg-clip-text text-transparent">
+            Software developer
+          </span>
+        </h2>
+      </div>
+      {/* --- END OF NEW HEADER --- */}
+
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
         <div className="space-y-4 text-text-dark">
           <p>

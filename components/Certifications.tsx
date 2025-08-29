@@ -30,7 +30,7 @@ const certificationsData = [
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-24">
+    <section id="certifications" className="py-38 md:py-24">
       <h2 className="mb-12 text-center text-3xl font-bold text-text-light sm:text-4xl">
         My Certifications
       </h2>
