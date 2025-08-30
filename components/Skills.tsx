@@ -53,7 +53,7 @@ const Skills = () => {
         {allSkills.map(({ name, icon: IconComponent, color }, i) => (
           <div
             key={i}
-            className="flex items-center gap-3 rounded-lg border border-border-gray bg-main-gray/50 px-4 py-2 transition-all duration-300 hover:border-accent hover:bg-main-gray"
+            className="flex items-center gap-3 rounded-lg border border-border-gray bg-main-gray/50 px-4 py-2 transition-all duration-300 hover:border-accent hover:bg-main-gray hover:-translate-y-2"
           >
             {/* The span now gets its color from the data object */}
             <span className={`text-2xl ${color}`}>
