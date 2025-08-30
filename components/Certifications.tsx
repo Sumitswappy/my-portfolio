@@ -68,9 +68,9 @@ const Certifications = () => {
                 </div>
               </div>
               <div className="mt-4 flex items-center justify-between">
-                 <span className=" text-sm text-accent ">
-                  <FaEye size={20} />
-                </span>
+                <span className="flex text-sm text-accent ">
+                          <FaEye size={20} />&nbsp;&nbsp;Click to view
+                        </span>
                 <p className="font-mono text-sm text-accent">{date}</p>
               </div>
             </div>

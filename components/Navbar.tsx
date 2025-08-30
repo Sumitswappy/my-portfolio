@@ -99,8 +99,10 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
         <div className="flex flex-shrink-0 items-center gap-4">
-          <Link href="/" className="font-mono text-xl font-bold">
-            <span className="text-accent">S</span>umit <span className="text-accent">S</span>arkar
+          <Link href="#home" className="flex items-center gap-2">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full border-[2px] bg-accent">
+              <span className="font-mono text-lg font-black text-background">SS</span>
+            </div>
           </Link>
           
           {isClient && (

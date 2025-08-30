@@ -6,7 +6,7 @@ import { FaDownload, FaPaperPlane } from 'react-icons/fa6';
 
 const Hero = () => {
   return (
-    <section className="py-38 md:py-24">
+    <section className="py-38 md:py-24" id="home">
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
         <div className="space-y-6 text-center md:text-left">
           <TypeAnimation

@@ -13,6 +13,8 @@ import {
   SiPostman,
   SiSap,
   SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
 } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 
@@ -27,6 +29,8 @@ const allSkills = [
   { name: 'Spring Boot', icon: SiSpringboot, color: 'text-[#6DB33F]' },
   { name: 'React.js', icon: FaReact, color: 'text-[#61DAFB]' },
   { name: 'Next.js', icon: SiNextdotjs, color: 'text-text-light' }, // White for Next.js logo
+  { name: 'Tailwind Css', icon: SiTailwindcss, color: 'text-[#38B2AC]' },
+  { name: 'TypeScript', icon: SiTypescript, color: 'text-[#3178C6]' },
   { name: 'REST APIs', icon: TbApi, color: 'text-accent' },
   { name: 'GitHub', icon: FaGithub, color: 'text-text-light' }, // White for GitHub logo
   { name: 'AWS', icon: FaAws, color: 'text-[#FF9900]' },

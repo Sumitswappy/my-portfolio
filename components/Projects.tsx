@@ -6,14 +6,14 @@ const projects = [
     title: 'Student Academic Portal',
     description: 'A role-based academic management system with secure JWT authentication and modules for enrollment, grades, and fees.',
     image: '/SAP.jpg',
-    year: '2024',
+    year: '2025',
     link: 'https://github.com/sumanulto/sapportal', 
   },
   {
     title: 'Unifind.in',
     description: 'A college discovery platform allowing students to search and compare over 100 colleges, featuring a 30% query performance optimization.',
     image: '/unifind.jpeg',
-    year: '2023',
+    year: '2024',
     link: 'https://github.com/Sumitswappy/MinorProject',
   },
    {
