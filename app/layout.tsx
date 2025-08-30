@@ -1,7 +1,7 @@
 'use client'; // This must now be a client component to manage state
 
 import { useState, useEffect } from 'react';
-import { Inter, Fira_Code } from 'next/font/google';
+import { Inter, Fira_Code, Source_Sans_3} from 'next/font/google';
 import './globals.css';
 import Loader from '@/components/Loader';
 import CustomCursor from '@/components/CustomCursor';
@@ -9,7 +9,10 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira-code' });
-
+const sourceSans = Source_Sans_3({
+  subsets: ['latin'],
+  variable: '--font-source-sans',
+});
 // We remove metadata from here and can place it in page.tsx if needed
 // export const metadata = { ... };
 
@@ -26,10 +29,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }, []);
 
   return (
-    <html lang="en">
-      <body
-        className={`${inter.variable} ${firaCode.variable} bg-background font-sans text-text-light`}
-      >
+    <html lang="en" className={`${inter.variable} ${firaCode.variable} ${sourceSans.variable}`}>
+      <body className="bg-background font-sans text-text-light">
          <div className="hidden md:block">
           <CustomCursor />
         </div>

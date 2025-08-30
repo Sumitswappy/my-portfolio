@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
+        source: ['var(--font-source-sans)'],
         sans: ['var(--font-inter)'],
         mono: ['var(--font-fira-code)'],
       },

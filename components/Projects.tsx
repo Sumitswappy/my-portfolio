@@ -10,7 +10,7 @@ const projects = [
     link: 'https://github.com/sumanulto/sapportal', 
   },
   {
-    title: 'Unifind',
+    title: 'Unifind.in',
     description: 'A college discovery platform allowing students to search and compare over 100 colleges, featuring a 30% query performance optimization.',
     image: '/unifind.jpeg',
     year: '2023',
@@ -44,7 +44,7 @@ const Projects = () => {
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <Link href={project.link} key={project.title} target="_blank" rel="noopener noreferrer" className="block h-full">
-            <div className="group flex h-full flex-col rounded-[15px] border border-border-gray bg-main-gray transition-transform duration-300 hover:-translate-y-2">
+            <div className="group flex h-full flex-col rounded-[15px] border border-border-gray bg-main-gray transition-transform duration-300 hover:bg-[#D4FBFC] hover:-translate-y-2 hover:text-black sm:w-auto">
               <div className="rounded-[15px] relative h-48 w-full overflow-hidden">
                 <Image src={project.image} alt={`Screenshot of ${project.title}`} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
               </div>

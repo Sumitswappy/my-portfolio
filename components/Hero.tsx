@@ -24,11 +24,11 @@ const Hero = () => {
             Final-year MCA student crafting scalable REST APIs and full-stack applications.
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
-            <a href="#contact" className="inline-flex w-full items-center justify-center gap-2 border border-accent px-4 py-2 text-white transition hover:bg-accent/10 sm:w-auto">
+            <a href="#contact" className="rounded inline-flex w-full items-center justify-center gap-2 border border-accent px-4 py-2 text-white transition hover:bg-white hover:-translate-y-1 hover:text-black sm:w-auto">
               <FaPaperPlane />
               <span>Contact Me !!</span>
             </a>
-            <a href="/Sumit-Sarkar-Resume.pdf" download className="inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 text-text-dark transition hover:border-accent hover:text-accent sm:w-auto">
+            <a href="/Sumit-Sarkar-Resume.pdf" download className="rounded inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 text-text-dark transition hover:bg-white hover:-translate-y-1 hover:text-black sm:w-auto">
               <FaDownload /> 
               <span>Download Resume</span>
             </a>

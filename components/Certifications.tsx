@@ -1,6 +1,6 @@
 import { SiSap, SiCisco, SiAccenture } from 'react-icons/si';
 import Link from 'next/link'; // 1. Import the Link component
-// 2. Added a 'link' property to each certification
+import { FaEye } from 'react-icons/fa6';
 const certificationsData = [
   {
     name: 'Managing Clean Core for SAP S/4HANA Cloud - Record of Achievement',
@@ -54,7 +54,7 @@ const Certifications = () => {
             className="block h-full"
           >
             <div
-              className="flex h-full flex-col justify-between rounded-lg border border-border-gray bg-main-gray p-6 transition-transform duration-300 hover:-translate-y-2"
+              className="flex h-full flex-col justify-between rounded-lg border border-border-gray bg-main-gray p-6 transition-transform duration-300 hover:bg-[#ffffff] hover:-translate-y-2 hover:text-black sm:w-auto"
             >
               <div>
                 <div className="flex items-start gap-4">
@@ -67,7 +67,12 @@ const Certifications = () => {
                   </div>
                 </div>
               </div>
-              <p className="mt-4 self-end font-mono text-sm text-text-dark">{date}</p>
+              <div className="mt-4 flex items-center justify-between">
+                 <span className=" text-sm text-accent ">
+                  <FaEye size={20} />
+                </span>
+                <p className="font-mono text-sm text-accent">{date}</p>
+              </div>
             </div>
           </Link>
         ))}

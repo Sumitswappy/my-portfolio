@@ -13,7 +13,7 @@ const AboutMe = () => {
         </p>
         <h2 className="mt-2 text-4xl font-bold tracking-tight text-text-light sm:text-5xl">
           <span>I&apos;m Sumit, a</span>
-          <span className="block bg-gradient-to-r from-blue-900 to-sky-400 bg-clip-text text-transparent">
+          <span className="block bg-gradient-to-r from-sky-300 to-purple-700 bg-clip-text text-transparent">
             Software developer
           </span>
         </h2>
@@ -21,7 +21,7 @@ const AboutMe = () => {
       {/* --- END OF NEW HEADER --- */}
 
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-        <div className="space-y-4 text-text-dark">
+        <div className="space-y-4 font-source text-text-dark ">
           <p>
             Hello, I&apos;m Sumit! I&apos;m a final-year MCA student at KIIT University with a passion for building impactful solutions.
           </p>
