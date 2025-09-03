@@ -5,6 +5,7 @@ import { Inter, Fira_Code, Source_Sans_3} from 'next/font/google';
 import './globals.css';
 import Loader from '@/components/Loader';
 import CustomCursor from '@/components/CustomCursor';
+
 import { AnimatePresence, motion } from 'framer-motion';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });

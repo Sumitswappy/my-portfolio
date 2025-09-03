@@ -20,7 +20,7 @@ const Hero = () => {
             className="text-3xl font-bold tracking-tighter sm:text-4xl lg:text-5xl"
             repeat={Infinity}
           />
-          <p className="text-text-dark">
+          <p className="text-slate-600 dark:text-text-dark">
             Final-year MCA student crafting scalable REST APIs and full-stack applications.
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
