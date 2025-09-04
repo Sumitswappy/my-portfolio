@@ -133,7 +133,7 @@ const Navbar = () => {
             <span className="absolute bottom-9 h-3 rounded-full bg-accent transition-all duration-300 ease-in-out w-[var(--underline-width,0)] left-[var(--underline-left,0)] opacity-[var(--underline-opacity,0)]" />
           </nav>
           <div className="flex items-center md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-2xl text-text-light">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-2xl text-text-dark">
               {isMenuOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
