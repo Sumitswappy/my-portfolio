@@ -23,12 +23,12 @@ const Hero = () => {
           <p className="text-slate-400 dark:text-text-dark">
             Final-year MCA student crafting scalable REST APIs and full-stack applications.
           </p>
-          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
-            <a href="#contact" className="rounded inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-text-dark transition hover:bg-accent-3 hover:-translate-y-1 hover:text-black sm:w-auto hover:shadow-[0_0_0_var(--glow-color)]">
+          <div className="flex flex-row items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
+            <a href="#contact" className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-text-dark transition hover:bg-accent-3 hover:-translate-y-1 hover:text-black sm:w-auto hover:shadow-[0_0_0_var(--glow-color)]">
               <FaPaperPlane />
               <span>Contact Me !!</span>
             </a>
-            <a href="/Sumit-Sarkar-Resume.pdf" download className="rounded inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-text-dark transition hover:bg-accent-3 hover:-translate-y-1 hover:text-black sm:w-auto hover:shadow-[0_0_0_var(--glow-color)]">
+            <a href="/Sumit-Sarkar-Resume.pdf" download className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-text-dark transition hover:bg-accent-3 hover:-translate-y-1 hover:text-black sm:w-auto hover:shadow-[0_0_0_var(--glow-color)]">
               <FaDownload />
               <span>Download Resume</span>
             </a>

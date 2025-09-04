@@ -31,7 +31,7 @@ const Academics = () => {
     <section id="academics" className="py-24">
       <div className="container mx-auto max-w-3xl px-4">
         <h2 className="mb-16 text-center text-4xl font-bold tracking-tight text-text-light sm:text-5xl">
-          My Jour<span className="text-accent">ney</span>
+          My Jour<span className="text-accent-4">ney</span>
         </h2>
         
         {/* --- DESKTOP: Alternating Timeline --- */}

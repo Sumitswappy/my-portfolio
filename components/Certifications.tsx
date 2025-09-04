@@ -41,7 +41,7 @@ const Certifications = () => {
   return (
     <section id="certifications" className="py-38 md:py-24">
       <h2 className="mb-12 text-center text-3xl font-bold text-text-light sm:text-4xl">
-        My Certifi<span className="text-accent">cations</span>
+        My Certifi<span className="text-accent-4">cations</span>
       </h2>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {certificationsData.map(({ name, issuer, date, icon: IconComponent, color, link }, index) => (
@@ -53,7 +53,7 @@ const Certifications = () => {
             className="block h-full"
           >
             <div
-              className="group flex h-full flex-col justify-between rounded-lg border border-border-gray bg-main-gray  p-6 transition-transform duration-300 hover:shadow-[0_0_20px_var(--glow-color)] hover:-translate-y-2 sm:w-auto "
+              className="group flex h-full flex-col justify-between rounded-[15px] border border-border-gray bg-main-gray  p-6 transition-transform duration-300 hover:shadow-[0_0_20px_var(--glow-color)] hover:-translate-y-2 sm:w-auto "
             >
               <div>
                 <div className="flex items-start gap-4">

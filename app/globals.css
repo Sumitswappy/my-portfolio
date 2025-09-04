@@ -7,14 +7,16 @@ html {
 }
 @theme {
   /* Default Theme (Blue Theme) */
-  --color-accent: #3b82f6; /* A bright, vibrant blue */
---color-accent-2: #2563eb; /* A slightly darker blue */
---color-accent-3: #eff6ff; /* A light, almost white blue */
---color-accent-4: #1d4ed8; /* A dark blue for text */
---color-text-light: #f3f4f6; /* A light gray for headlines */
---color-text-dark: #dbeafe; /* A light blue for secondary text */
- --color-background: #0f172a; /* Midnight blue */
---glow-color: #3b82f6; /* Glow color for the theme */
+
+ /* Default Theme (Blue Theme) */
+  --color-accent: #00def7;
+  --color-accent-2: #03dcfd;
+  --color-accent-3: #e0fbff;
+  --color-accent-4: #007ED4;
+  --color-text-light: #ffffff;
+  --color-text-dark: #00A4D1;
+  --color-background: #070315ff;
+  --glow-color: #00def7; /* Glow color for blue theme */
 }
 
 /* Forest Theme */
@@ -31,14 +33,14 @@ html {
 
 /* Red Theme */
 .midnight-theme {
-  --color-accent: #5C00FA; /* The new vibrant base color */
-  --color-accent-2: #4f00d6; /* A slightly darker shade for secondary elements */
-  --color-accent-3: #eee5ff; /* A light, almost white violet for hover backgrounds */
-  --color-accent-4: #4300b8; /* A deep violet for gradients and highlights */
-  --color-text-light: #f5f0ff; /* A light, soft white for headlines */
-  --color-text-dark: #ccb9ff; /* A lighter violet for secondary text */
-  --color-background: #0d001e; /* A very dark, almost black, violet for the background */
-  --glow-color: #5C00FA; /* A vibrant glow to match the theme */
+  --color-accent: #3b82f6; /* A bright, vibrant blue */
+--color-accent-2: #2563eb; /* A slightly darker blue */
+--color-accent-3: #eff6ff; /* A light, almost white blue */
+--color-accent-4: #1d4ed8; /* A dark blue for text */
+--color-text-light: #f3f4f6; /* A light gray for headlines */
+--color-text-dark: #dbeafe; /* A light blue for secondary text */
+ --color-background: #0f172a; /* Midnight blue */
+--glow-color: #3b82f6; /* Glow color for the theme */
 }
 
 /* Other global styles if needed */

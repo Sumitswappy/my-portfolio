@@ -95,7 +95,7 @@ const Navbar = () => {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         hasScrolled || isMenuOpen
-          ? 'border-b border-border-gray bg-background/95 backdrop-blur-sm'
+          ? 'border-b border-border-gray bg-gray/95 backdrop-blur-sm'
           : 'border-b border-transparent'
       }`}
     >
@@ -114,8 +114,8 @@ const Navbar = () => {
           </Link>
           
           {isClient && (
-            <div className=" items-center gap-2 border-l border-border-gray pl-4 text-xs text-text-dark sm:flex">
-              <div className='text-left rounded-full py-1 px-4 shadow-[0_0_20px_var(--glow-color)]'>
+            <div className=" items-center gap-2 border-l border-border-gray pl-4 text-xs text-text-light sm:flex">
+              <div className=' text-left rounded-full py-1 px-4 shadow-[0_0_20px_var(--glow-color)]'>
                 <div className="flex items-center gap-2"><FaRegCalendarAlt className="text-accent" /><span>{currentDateTime.toLocaleDateString('en-US', dateOptions)}</span></div>
                 <div className="flex items-center gap-2"><FaRegClock className="text-accent" /><span>{currentDateTime.toLocaleTimeString('en-US', timeOptions)}</span></div>
               </div>
