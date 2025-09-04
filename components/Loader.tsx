@@ -55,7 +55,6 @@ const Loader = () => {
         </svg>
       </div>
 
-      {/* 2. Replaced the <p> tag with the TypeAnimation component */}
       <TypeAnimation
         sequence={[
           'Getting things ready...',
@@ -71,5 +70,4 @@ const Loader = () => {
     </div>
   );
 };
-
 export default Loader;

@@ -17,44 +17,37 @@ const Hero = () => {
             ]}
             wrapper="h1"
             speed={60}
-            className="text-3xl font-bold tracking-tighter sm:text-4xl lg:text-5xl"
+            className="text-3xl font-bold tracking-tighter text-text-light sm:text-4xl lg:text-5xl"
             repeat={Infinity}
           />
           <p className="text-slate-400 dark:text-text-dark">
             Final-year MCA student crafting scalable REST APIs and full-stack applications.
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
-            <a href="#contact" className="rounded inline-flex w-full items-center justify-center gap-2 border border-accent px-4 py-2 text-white transition hover:bg-white hover:-translate-y-1 hover:text-black sm:w-auto">
+            <a href="#contact" className="rounded inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-text-dark transition hover:bg-accent-3 hover:-translate-y-1 hover:text-black sm:w-auto hover:shadow-[0_0_0_var(--glow-color)]">
               <FaPaperPlane />
               <span>Contact Me !!</span>
             </a>
-            <a href="/Sumit-Sarkar-Resume.pdf" download className="rounded inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 text-text-dark transition hover:bg-white hover:-translate-y-1 hover:text-black sm:w-auto">
-              <FaDownload /> 
+            <a href="/Sumit-Sarkar-Resume.pdf" download className="rounded inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-text-dark transition hover:bg-accent-3 hover:-translate-y-1 hover:text-black sm:w-auto hover:shadow-[0_0_0_var(--glow-color)]">
+              <FaDownload />
               <span>Download Resume</span>
             </a>
           </div>
         </div>
-
-        {/* --- THIS IS THE UPDATED PART --- */}
         <div className="relative flex h-[400px] w-full items-end justify-center">
-          {/* The background ring (340px wide) */}
-          <div className="absolute bottom-0 h-[320px] w-[320px] rounded-full border-[10px] border-[#E0FBFF] z-10 shadow-[0_0_50px_#00DEF7]"></div>
-          
-          {/* The image container (margins removed) */}
+          <div className="absolute bottom-0 h-[320px] w-[320px] rounded-full border-[10px] border-accent-3 z-10 shadow-[0_0_50px_var(--glow-color)]"></div>
           <div className="relative z-20">
             <Image
               src="/sumit.png"
               alt="Sumit Sarkar"
-              width={320}  // Image is now smaller (320px) than the ring
+              width={320}
               height={320}
-              className="rounded-full object-cover" // Image is also a circle
+              className="rounded-full object-cover"
             />
           </div>
         </div>
-        {/* --- END OF UPDATED PART --- */}
       </div>
     </section>
   );
 };
-
 export default Hero;

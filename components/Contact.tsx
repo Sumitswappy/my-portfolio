@@ -1,3 +1,4 @@
+// Contact.tsx
 import { 
   FaEnvelope, 
   FaMapMarkerAlt, 
@@ -5,12 +6,12 @@ import {
   FaLinkedin,
   FaGithub 
 } from 'react-icons/fa';
-import { FiPhone } from 'react-icons/fi'; // 1. Replaced FaPhone with FiPhone
+import { FiPhone } from 'react-icons/fi';
 import Link from 'next/link';
 
 const contactDetails = [
   {
-    icon: <FiPhone />, // 2. Used the new icon here
+    icon: <FiPhone />,
     title: 'Phone & Mobile',
     details: ['(+91) 7980794966'],
   },
@@ -40,19 +41,18 @@ const Contact = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[60%] bg-gradient-to-tr from-background via-accent/30 to-background rounded-full blur-3xl -z-10"></div>
       <div className="container mx-auto max-w-5xl px-4 text-center">
         <h2 className="text-4xl font-extrabold uppercase tracking-widest text-text-light">
-          Get In Touch
+          Get In <span className="text-accent">Touch</span>
         </h2>
-        <p className="mt-2 text-lg text-red-400">
+        
+        <p className="mt-2 text-lg text-accent">
           Let&apos;s Work Together
         </p>
-
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {contactDetails.map((item, index) => (
             <div key={index} className="flex flex-col items-center gap-4">
-              <div className="text-4xl text-sky-400">{item.icon}</div>
+              <div className="text-4xl text-accent-2">{item.icon}</div>
               <h3 className="text-xl font-bold text-text-light">{item.title}</h3>
               <div className="space-y-2 text-text-dark">
-
                 {item.title === 'Social Media' ? (
                   item.details.map((detail, i) =>
                     typeof detail === 'object' && 'href' in detail ? (
@@ -84,5 +84,4 @@ const Contact = () => {
     </section>
   );
 };
-
 export default Contact;

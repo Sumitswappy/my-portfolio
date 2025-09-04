@@ -2,7 +2,9 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaRegCalendarAlt, FaRegClock, FaBars, FaTimes } from 'react-icons/fa';
+import logoImage from '/public/sumit2.png';
 
 // Correct order of navLinks to match page layout
 const navLinks = [
@@ -100,14 +102,20 @@ const Navbar = () => {
       <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
         <div className="flex flex-shrink-0 items-center gap-4">
           <Link href="#home" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full border-[2px] bg-accent">
-              <span className="font-mono text-lg font-black text-background">SS</span>
+            <div className="flex h-11 w-11 items-center justify-center rounded-full border-[2px] bg-accent">
+              <Image
+            src={logoImage}
+            alt="My Logo"
+            width={114} // Adjust these values to fit your logo
+            height={114}
+            className="rounded-full"
+          />
             </div>
           </Link>
           
           {isClient && (
             <div className=" items-center gap-2 border-l border-border-gray pl-4 text-xs text-text-dark sm:flex">
-              <div className='text-left'>
+              <div className='text-left rounded-full py-1 px-4 shadow-[0_0_20px_var(--glow-color)]'>
                 <div className="flex items-center gap-2"><FaRegCalendarAlt className="text-accent" /><span>{currentDateTime.toLocaleDateString('en-US', dateOptions)}</span></div>
                 <div className="flex items-center gap-2"><FaRegClock className="text-accent" /><span>{currentDateTime.toLocaleTimeString('en-US', timeOptions)}</span></div>
               </div>
@@ -122,7 +130,7 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <span className="absolute bottom-9 h-3 rounded-full bg-red-400 transition-all duration-300 ease-in-out w-[var(--underline-width,0)] left-[var(--underline-left,0)] opacity-[var(--underline-opacity,0)]" />
+            <span className="absolute bottom-9 h-3 rounded-full bg-accent transition-all duration-300 ease-in-out w-[var(--underline-width,0)] left-[var(--underline-left,0)] opacity-[var(--underline-opacity,0)]" />
           </nav>
           <div className="flex items-center md:hidden">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-2xl text-text-light">

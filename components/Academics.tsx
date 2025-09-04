@@ -1,3 +1,4 @@
+// Academics.tsx
 import { FaEye } from "react-icons/fa6";
 import Link from 'next/link';
 
@@ -30,7 +31,7 @@ const Academics = () => {
     <section id="academics" className="py-24">
       <div className="container mx-auto max-w-3xl px-4">
         <h2 className="mb-16 text-center text-4xl font-bold tracking-tight text-text-light sm:text-5xl">
-          My Journey
+          My Jour<span className="text-accent">ney</span>
         </h2>
         
         {/* --- DESKTOP: Alternating Timeline --- */}
@@ -40,11 +41,11 @@ const Academics = () => {
             <div className="space-y-12">
               {academicsData.map((item, index) => (
                 <div key={index} className="relative">
-                  <div className="absolute top-0 left-1/2 z-10 h-6 w-6 -translate-x-1/2 rounded-full border-2 border-accent bg-transparent shadow-[0_0_20px] shadow-accent/50"></div>
+                  <div className="absolute top-0 left-1/2 z-10 h-6 w-6 -translate-x-1/2 rounded-full border-2 border-accent bg-transparent shadow-[0_0_20px] shadow-accent/50 "></div>
                   <div className={`flex items-center md:gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                    <div className="w-1/2"></div> {/* Spacer */}
+                    <div className="w-1/2"></div>
                     <a href={item.link} target="_blank" download rel="noopener noreferrer" className="block w-1/2">
-                      <div className="group rounded-lg border border-gray-700 bg-main-gray p-6 transition-transform duration-300 hover:-translate-y-2">
+                      <div className="group rounded-lg border border-gray-700 bg-main-gray p-6 transition-transform duration-300 hover:-translate-y-2 hover:shadow-[0_0_10px_var(--glow-color)]">
                         <h3 className="text-xl font-bold text-text-light">{item.university}</h3>
                         <p className="mt-1 text-text-light">{item.degree}</p>
                         <p className="mt-2 text-sm text-text-dark">{item.dates}</p>
@@ -92,5 +93,4 @@ const Academics = () => {
     </section>
   );
 };
-
 export default Academics;

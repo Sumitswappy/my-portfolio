@@ -1,3 +1,4 @@
+// Background.tsx
 'use client'; 
 
 import { useEffect, useState } from 'react';
@@ -42,7 +43,7 @@ const Background = () => {
         value: '#ffffffc5', 
       },
       links: {
-        color: '#b5f8fca7',
+        color: 'var(--color-accent-3)',
         distance: 150,
         enable: true,
         opacity: 0.5,
@@ -89,8 +90,6 @@ const Background = () => {
         />
     );
   }
-
   return <></>;
 };
-
 export default Background;

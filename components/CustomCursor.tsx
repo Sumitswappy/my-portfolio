@@ -18,9 +18,7 @@ const CustomCursor = () => {
         setIsHoveringLink(false);
       }
     };
-
     window.addEventListener('mousemove', handleMouseMove);
-
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
@@ -28,24 +26,27 @@ const CustomCursor = () => {
 
   const cursorVariants = {
     default: {
-      x: mousePosition.x - 12, // Centered for 24px size
-      y: mousePosition.y - 12,
-      backgroundColor: 'rgba(0, 234, 255, 0.11)',
-      border: '2px solid rgba(3, 220, 253, 1)',
+      x: mousePosition.x - 12, // Half of the div's width (24px)
+      y: mousePosition.y - 12, // Half of the div's height (24px)
+      backgroundColor: 'var(--color-accent-3)',
+      opacity: 0.3,
+      borderWidth: '2px',
+      borderColor: 'var(--color-accent-2)',
     },
     hovering: {
-      x: mousePosition.x - 16, // Centered for 32px size
-      y: mousePosition.y - 16,
+      x: mousePosition.x - 21, // Half of the div's width (42px)
+      y: mousePosition.y - 21, // Half of the div's height (42px)
       height: 42,
       width: 42,
-      backgroundColor: 'rgba(3, 220, 253, 0.2)',
-      border: '2px solid rgba(3, 220, 253, 0.5)',
+      backgroundColor: 'var(--color-accent-3)',
+      opacity: 0.4,
+      borderWidth: '2px',
+      borderColor: 'var(--color-accent-2)',
     },
   };
-
   const dotVariants = {
     default: {
-      x: mousePosition.x - 2, // Centered for 4px size
+      x: mousePosition.x - 2,
       y: mousePosition.y - 2,
       scale: 1,
     },
@@ -58,15 +59,12 @@ const CustomCursor = () => {
 
   return (
     <>
-      {/* The follower/highlighter */}
       <motion.div
         variants={cursorVariants}
         animate={isHoveringLink ? 'hovering' : 'default'}
         transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-        className="fixed h-6 w-6 rounded-full pointer-events-none z-[9999]"
+        className="fixed h-6 w-6 rounded-full pointer-events-none z-[9999] border-solid"
       ></motion.div>
-      
-      {/* The main dot */}
       <motion.div
         variants={dotVariants}
         animate={isHoveringLink ? 'hovering' : 'default'}
@@ -76,5 +74,4 @@ const CustomCursor = () => {
     </>
   );
 };
-
 export default CustomCursor;
