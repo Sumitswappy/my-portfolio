@@ -69,7 +69,7 @@ const CustomCursor = () => {
         variants={dotVariants}
         animate={isHoveringLink ? 'hovering' : 'default'}
         transition={{ type: 'spring', stiffness: 500, damping: 20 }}
-        className="fixed h-1 w-1 rounded-full bg-accent pointer-events-none z-[9999]"
+        className="fixed h-1 w-1 rounded-full bg-[var(--color-accent)] pointer-events-none z-[9999]"
       ></motion.div>
     </>
   );

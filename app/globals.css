@@ -5,10 +5,21 @@
 html {
   scroll-behavior: smooth;
 }
-@theme {
-  /* Default Theme (Blue Theme) */
 
- /* Default Theme (Blue Theme) */
+/* :root defines the default theme (Orange Light Theme) */
+:root {
+  --color-accent: #F97316;
+  --color-accent-2: #EA580C;
+  --color-accent-3: #feeaa4;
+  --color-accent-4: #f89000;
+  --color-text-light: #753c00;  /* Dark text for light background */
+  --color-text-dark: #fb540c;   /* Dark text for light background */
+  --color-background: #ffffff;
+  --glow-color: #F97316;
+}
+
+/* Default Dark Theme (Blue) */
+/* html[data-theme='dark'] {
   --color-accent: #00def7;
   --color-accent-2: #03dcfd;
   --color-accent-3: #e0fbff;
@@ -16,39 +27,35 @@ html {
   --color-text-light: #ffffff;
   --color-text-dark: #00A4D1;
   --color-background: #070315ff;
-  --glow-color: #00def7; /* Glow color for blue theme */
-}
+  --glow-color: #00def7;
+} */
 
 /* Forest Theme */
-.forest-theme {
- --color-accent: #00FA53; /* The new vibrant base color */
-  --color-accent-2: #00CC44; /* A slightly darker shade for secondary elements */
-  --color-accent-3: #E0FFE5; /* A light, almost white green for hover backgrounds */
-  --color-accent-4: #00882C; /* A deep green for gradients and highlights */
-  --color-text-light: #F0FFF2; /* A light, soft white for headlines */
-  --color-text-dark: #B9FFC4; /* A lighter green for secondary text */
-  --color-background: #001A03; /* A very dark, almost black, green for the background */
-  --glow-color: #00FA53; /* A vibrant glow to match the theme */
+html[data-theme='forest'] {
+  --color-accent: #00FA53;
+  --color-accent-2: #00CC44;
+  --color-accent-3: #E0FFE5;
+  --color-accent-4: #00882C;
+  --color-text-light: #ffffff;
+  --color-text-dark: #B9FFC4;
+  --color-background: #001A03;
+  --glow-color: #00FA53;
 }
 
-/* Red Theme */
-.midnight-theme {
-  --color-accent: #3b82f6; /* A bright, vibrant blue */
---color-accent-2: #2563eb; /* A slightly darker blue */
---color-accent-3: #eff6ff; /* A light, almost white blue */
---color-accent-4: #1d4ed8; /* A dark blue for text */
---color-text-light: #f3f4f6; /* A light gray for headlines */
---color-text-dark: #dbeafe; /* A light blue for secondary text */
- --color-background: #0f172a; /* Midnight blue */
---glow-color: #3b82f6; /* Glow color for the theme */
+/* Midnight Theme */
+html[data-theme='midnight'] {
+  --color-accent: #3b82f6;
+  --color-accent-2: #252feb;
+  --color-accent-3: #eff6ff;
+  --color-accent-4: #1d4ed8;
+  --color-text-light: #f3f4f6;
+  --color-text-dark: #63a4fa;
+  --color-background: #000000;
+  --glow-color: #2f52fe;
 }
 
-/* Other global styles if needed */
-html.dark {
-  color-scheme: dark;
-}
-
+/* This is the crucial fix: Body styles now use the theme variables */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
+  background-color: var(--color-background);
+  color: var(--color-text-light); /* Sets the main text color from the theme */
 }

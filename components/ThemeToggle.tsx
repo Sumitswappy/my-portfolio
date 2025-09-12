@@ -1,27 +1,17 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { FaTint, FaTree, FaMoon, FaPalette } from 'react-icons/fa';
+import { useState } from 'react';
+import { useTheme } from '../contexts/ThemeContext'; // Make sure the path is correct
+import { FaSun, FaTree, FaMoon, FaPalette, FaTint } from 'react-icons/fa';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState('blue-theme');
+  const { theme, setTheme } = useTheme(); // Use the global context
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'blue-theme';
-    setTheme(savedTheme);
-    document.documentElement.className = savedTheme;
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.className = theme;
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
   const toggleTheme = (newTheme: string) => {
-    setTheme(newTheme);
-    setIsMenuOpen(false); // Close the menu after a theme is selected
+    setTheme(newTheme); // This now updates the global state
+    setIsMenuOpen(false);
   };
 
   const handleToggleMenu = () => {
@@ -40,21 +30,22 @@ const ThemeToggle = () => {
             className="flex flex-col items-center gap-2"
           >
             <button
-              onClick={() => toggleTheme('blue-theme')}
+              onClick={() => toggleTheme('light')}
               className={`flex items-center justify-center rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110 ${
-                theme === 'blue-theme'
-                  ? 'bg-accent text-black shadow-[0_0_20px_var(--glow-color)]'
+                theme === 'light'
+                  ? 'bg-accent text-[var(--color-accent-4)] shadow-[0_0_20px_var(--glow-color)]'
                   : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
               }`}
-              title="Blue Theme"
+              title="Light Theme"
             >
-              <FaTint size={20} />
+              <FaSun size={20} />
             </button>
+        
             <button
-              onClick={() => toggleTheme('forest-theme')}
+              onClick={() => toggleTheme('forest')}
               className={`flex items-center justify-center rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110 ${
-                theme === 'forest-theme'
-                  ? 'bg-accent text-black shadow-[0_0_20px_var(--glow-color)]'
+                theme === 'forest'
+                  ? 'bg-accent text-[var(--color-accent-4)] shadow-[0_0_20px_var(--glow-color)]'
                   : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
               }`}
               title="Forest Theme"
@@ -62,10 +53,10 @@ const ThemeToggle = () => {
               <FaTree size={20} />
             </button>
             <button
-              onClick={() => toggleTheme('midnight-theme')}
+              onClick={() => toggleTheme('midnight')}
               className={`flex items-center justify-center rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110 ${
-                theme === 'midnight-theme'
-                  ? 'bg-accent text-black shadow-[0_0_20px_var(--glow-color)]'
+                theme === 'midnight'
+                  ? 'bg-accent text-[var(--color-accent-4)] shadow-[0_0_20px_var(--glow-color)]'
                   : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
               }`}
               title="Midnight Theme"
@@ -79,7 +70,7 @@ const ThemeToggle = () => {
         onClick={handleToggleMenu}
         className={`flex items-center justify-center rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110 ${
           isMenuOpen
-            ? 'bg-accent text-black shadow-[0_0_20px_var(--glow-color)]'
+            ? 'bg-accent text-[var(--color-accent-4)] shadow-[0_0_20px_var(--glow-color)]'
             : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
         }`}
         title="Toggle Themes"

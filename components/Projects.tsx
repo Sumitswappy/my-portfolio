@@ -32,7 +32,7 @@ const Projects = () => {
         <div className="flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
           <div>
             <h2 className="text-4xl font-bold tracking-tight text-text-light sm:text-5xl">
-              My Wor<span className="text-accent-4">ks</span>
+              My Wor<span className="text-[var(--color-accent-4)]">ks</span>
             </h2>
           </div>
           <p className="hidden font-mono text-2xl text-text-dark md:block">2023 - 2025</p>
@@ -42,7 +42,7 @@ const Projects = () => {
       <div className="grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <Link href={project.link} key={project.title} target="_blank" rel="noopener noreferrer" className="block h-full">
-            <div className="group flex h-full flex-col rounded-[25px] border border-border-gray bg-main-gray shadow-[0_0_20px_var(--glow-color)]  transition-transform duration-300 hover:bg-accent-3 hover:-translate-y-2 sm:w-auto hover:shadow-[0_0_0_var(--glow-color)]">
+            <div className="group flex h-full flex-col rounded-[25px]  bg-main-gray shadow-[0_0_20px_var(--glow-color)]  transition-transform duration-300 hover:bg-[var(--color-accent-3)] hover:-translate-y-2 sm:w-auto hover:shadow-[0_0_0_var(--glow-color)]">
               <div className="rounded-[15px] relative h-48 w-full overflow-hidden">
                 <Image src={project.image} alt={`Screenshot of ${project.title}`} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
               </div>

@@ -23,16 +23,16 @@ import { TbApi } from 'react-icons/tb';
 const allSkills = [
   { name: 'Java', icon: FaJava, color: 'text-[#F89820]' },
   { name: 'Python', icon: FaPython, color: 'text-[#3776AB]' },
-  { name: 'SQL', icon: FaDatabase, color: 'text-white' }, // Kept accent for generic icon
+  { name: 'SQL', icon: FaDatabase, color: 'text-[var(--color-text-dark)]' }, // Kept accent for generic icon
   { name: 'JavaScript', icon: IoLogoJavascript, color: 'text-[#F7DF1E]' },
   { name: 'SAP ABAP', icon: SiSap, color: 'text-[#008FD3]' },
   { name: 'Spring Boot', icon: SiSpringboot, color: 'text-[#6DB33F]' },
   { name: 'React.js', icon: FaReact, color: 'text-[#61DAFB]' },
-  { name: 'Next.js', icon: SiNextdotjs, color: 'text-white' }, // White for Next.js logo
+  { name: 'Next.js', icon: SiNextdotjs, color: 'text-[var(--color-text-dark)]' }, // White for Next.js logo
   { name: 'Tailwind Css', icon: SiTailwindcss, color: 'text-[#38B2AC]' },
   { name: 'TypeScript', icon: SiTypescript, color: 'text-[#3178C6]' },
-  { name: 'REST APIs', icon: TbApi, color: 'text-white' },
-  { name: 'GitHub', icon: FaGithub, color: 'text-white' }, // White for GitHub logo
+  { name: 'REST APIs', icon: TbApi, color: 'text-[var(--color-text-dark)]' },
+  { name: 'GitHub', icon: FaGithub, color: 'text-[var(--color-text-dark)]' }, // White for GitHub logo
   { name: 'AWS', icon: FaAws, color: 'text-[#FF9900]' },
   { name: 'Postman', icon: SiPostman, color: 'text-[#FF6C37]' },
 ];
@@ -45,7 +45,7 @@ const Skills = () => {
       <div className="text-center">
         <p className="font-mono text-sm uppercase text-text-dark">My Skills</p>
         <h2 className="text-4xl font-bold tracking-tight text-text-light sm:text-5xl">
-          My Tool <span className="text-accent-4">Box</span>
+          My Tool <span className="text-[var(--color-accent-4)]">Box</span>
         </h2>
       </div>
 
@@ -53,7 +53,7 @@ const Skills = () => {
         {allSkills.map(({ name, icon: IconComponent, color }, i) => (
          <div
   key={i}
-  className="flex items-center gap-3 rounded-lg border border-border-gray bg-main-gray/50 px-4 py-2 transition-all duration-300 hover:border-accent hover:bg-main-gray hover:-translate-y-2 hover:shadow-[0_0_20px_var(--glow-color)]"
+  className="flex items-center gap-3 rounded-lg  bg-main-gray/50 px-4 py-2 transition-all duration-300 hover:border-accent hover:bg-main-gray hover:-translate-y-2 hover:shadow-[0_0_20px_var(--glow-color)]"
 >
             {/* The span now gets its color from the data object */}
             <span className={`text-2xl ${color}`}>

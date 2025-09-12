@@ -17,25 +17,25 @@ const Hero = () => {
             ]}
             wrapper="h1"
             speed={60}
-            className="text-3xl font-bold tracking-tighter text-text-light sm:text-4xl lg:text-5xl"
+            className="text-3xl font-bold tracking-tighter text-[var(--color-text-light)] sm:text-4xl lg:text-5xl"
             repeat={Infinity}
           />
-          <p className="text-slate-400 dark:text-text-dark">
+          <p className="text-slate-400 dark:text-[var(--color-text-dark)]">
             Final-year MCA student crafting scalable REST APIs and full-stack applications.
           </p>
           <div className="flex flex-row items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
-            <a href="#contact" className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-text-dark transition hover:bg-accent-3 hover:-translate-y-1 hover:text-black sm:w-auto hover:shadow-[0_0_0_var(--glow-color)]">
+            <a href="#contact" className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-[var(--color-text-light)] transition hover:bg-[var(--color-accent-3)] hover:-translate-y-1 hover:text-black sm:w-auto hover:border-none hover:shadow-[0_0_0_var(--glow-color)]">
               <FaPaperPlane />
               <span>Contact Me !!</span>
             </a>
-            <a href="/Sumit-Sarkar-Resume.pdf" download className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-text-dark transition hover:bg-accent-3 hover:-translate-y-1 hover:text-black sm:w-auto hover:shadow-[0_0_0_var(--glow-color)]">
+            <a href="/Sumit-Sarkar-Resume.pdf" download className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-[var(--color-text-light)] transition hover:bg-[var(--color-accent-3)] hover:-translate-y-1 hover:text-black sm:w-auto hover:border-none hover:shadow-[0_0_0_var(--glow-color)]">
               <FaDownload />
               <span>Download Resume</span>
             </a>
           </div>
         </div>
         <div className="relative flex h-[400px] w-full items-end justify-center">
-          <div className="absolute bottom-0 h-[320px] w-[320px] rounded-full border-[10px] border-accent-3 z-10 shadow-[0_0_50px_var(--glow-color)]"></div>
+          <div className="absolute bottom-0 h-[320px] w-[320px] rounded-full border-[10px] border-[var(--color-accent-3)] z-10 shadow-[0_0_50px_var(--glow-color)]"></div>
           <div className="relative z-20">
             <Image
               src="/sumit.png"

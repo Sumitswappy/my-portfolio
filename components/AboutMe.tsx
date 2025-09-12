@@ -11,7 +11,7 @@ const AboutMe = () => {
         </p>
         <h2 className="mt-2 text-4xl font-bold tracking-tight text-text-light sm:text-5xl">
           <span>I&apos;m Sumit, a</span>
-          <span className="pb-2 block bg-gradient-to-l from-accent-3 to-accent-4 bg-clip-text text-transparent">
+          <span className="pb-2 block bg-gradient-to-l from-[var(--color-accent-3)] to-[var(--color-accent-4)] bg-clip-text text-transparent">
             Software developer
           </span>
         </h2>
@@ -29,7 +29,7 @@ const AboutMe = () => {
             I am actively seeking opportunities in backend or software development where I can apply my technical expertise and problem-solving abilities.
           </p>
         </div>
-        <div className="relative mx-auto w-full max-w-[350px] rounded-full bg-gradient-to-t from-accent-3 to-accent-4 p-[5px]">
+        <div className="relative mx-auto w-full max-w-[350px] rounded-full bg-gradient-to-t from-[var(--color-accent-3)] to-[var(--color-accent-4)] p-[5px]">
           <div
             className="relative w-full overflow-hidden rounded-full bg-background"
             style={{ aspectRatio: `${profileImage.width} / ${profileImage.height}` }}

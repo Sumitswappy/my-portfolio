@@ -2,6 +2,7 @@ import { SiSap, SiCisco, SiAccenture } from 'react-icons/si';
 import Link from 'next/link';
 import { FaEye } from 'react-icons/fa6';
 
+// --- THEME CHANGE #1: The hardcoded 'color' property is no longer needed and has been removed. ---
 const certificationsData = [
   {
     name: 'Managing Clean Core for SAP S/4HANA Cloud - Record of Achievement',
@@ -40,11 +41,11 @@ const certificationsData = [
 const Certifications = () => {
   return (
     <section id="certifications" className="py-38 md:py-24">
-      <h2 className="mb-12 text-center text-3xl font-bold text-text-light sm:text-4xl">
-        My Certifi<span className="text-accent-4">cations</span>
+      <h2 className="mb-12 text-center text-3xl font-bold text-[var(--color-text-light)] sm:text-4xl">
+        My Certifi<span className="text-[var(--color-accent-4)]">cations</span>
       </h2>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {certificationsData.map(({ name, issuer, date, icon: IconComponent, color, link }, index) => (
+        {certificationsData.map(({ name, issuer, date, icon: IconComponent,color, link }, index) => (
           <Link
             key={index}
             href={link}
@@ -52,25 +53,30 @@ const Certifications = () => {
             rel="noopener noreferrer"
             className="block h-full"
           >
+            {/* --- THEME CHANGE #2: Card background now uses a semi-transparent theme color. --- */}
             <div
-              className="group flex h-full flex-col justify-between rounded-[15px] border border-border-gray bg-main-gray  p-6 transition-transform duration-300 hover:shadow-[0_0_20px_var(--glow-color)] hover:-translate-y-2 sm:w-auto "
+              className="group flex h-full flex-col justify-between rounded-[15px] border border-[var(--color-text-light)]/30  p-6 transition-transform duration-300 hover:shadow-[0_0_20px_var(--glow-color)] hover:border-none hover:-translate-y-2 sm:w-auto "
             >
               <div>
                 <div className="flex items-start gap-4">
+                  {/* --- THEME CHANGE #3: Icon color is now consistently from the theme. --- */}
                   <span className={`text-4xl ${color}`}>
                     <IconComponent />
                   </span>
                   <div>
-                    <h3 className="font-bold text-white ">{issuer}</h3>
-                    <p className="text-sm text-white ">{name}</p>
+                    {/* --- THEME CHANGE #4: All text now uses theme variables. --- */}
+                    <h3 className="font-bold text-[var(--color-text-light)] ">{issuer}</h3>
+                    <p className="text-sm text-[var(--color-text-light)] ">{name}</p>
                   </div>
                 </div>
               </div>
               <div className="mt-4 flex items-center justify-between">
-                <span className="flex text-sm group-hover:text-accent transition-opacity duration-300 group-hover:opacity-100 ">
-                    <FaEye size={20} />&nbsp;&nbsp;Click to view
+                 {/* --- THEME CHANGE #5: "Click to view" text uses theme colors. --- */}
+                <span className="flex items-center gap-2 text-sm text-[var(--color-text-dark)] opacity-0 transition-opacity duration-300 group-hover:text-[var(--color-accent)] group-hover:opacity-100 ">
+                    <FaEye size={20} />
+                    <span>Click to view</span>
                 </span>
-                <p className="font-mono text-sm text-accent ">{date}</p>
+                <p className="font-mono text-sm text-[var(--color-accent)] ">{date}</p>
               </div>
             </div>
           </Link>
@@ -79,4 +85,5 @@ const Certifications = () => {
     </section>
   );
 };
+
 export default Certifications;
