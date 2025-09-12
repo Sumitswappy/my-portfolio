@@ -41,11 +41,11 @@ const Academics = () => {
             <div className="space-y-12">
               {academicsData.map((item, index) => (
                 <div key={index} className="relative">
-                  <div className="absolute top-0 left-1/2 z-10 h-6 w-6 -translate-x-1/2 rounded-full border-2 border-[var(--color-accent)] bg-transparent shadow-[0_0_20px_var(--glow-color)] shadow-[var(--color-text-light)]/50 "></div>
+                  <div className="absolute top-0 left-1/2 z-10 h-6 w-6 -translate-x-1/2 rounded-full  border-2 border-[var(--color-accent)] bg-transparent shadow-[0_0_20px_var(--glow-color)] shadow-[var(--color-text-light)]/50 "></div>
                   <div className={`flex items-center md:gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
                     <div className="w-1/2"></div>
                     <a href={item.link} target="_blank" download rel="noopener noreferrer" className="block w-1/2">
-                      <div className="group rounded-lg border border-[var(--color-accent-3)]/30 bg-main-gray p-6 transition-transform duration-300 hover:-translate-y-2 hover:border-none hover:shadow-[0_0_30px_var(--glow-color)]">
+                      <div className="group rounded-lg bg-[var(--color-background)] border border-[var(--color-accent-3)]/30 bg-main-gray p-6 transition-transform duration-300 hover:-translate-y-2 hover:border-none hover:shadow-[0_0_30px_var(--glow-color)]">
                         <h3 className="text-xl font-bold text-[var(--color-text-light)]">{item.university}</h3>
                         <p className="mt-1 text-[var(--color-text-light)]">{item.degree}</p>
                         <p className="mt-2 text-sm text-[var(--color-text-dark)]">{item.dates}</p>

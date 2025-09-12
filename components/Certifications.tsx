@@ -55,7 +55,7 @@ const Certifications = () => {
           >
             {/* --- THEME CHANGE #2: Card background now uses a semi-transparent theme color. --- */}
             <div
-              className="group flex h-full flex-col justify-between rounded-[15px] border border-[var(--color-text-light)]/30  p-6 transition-transform duration-300 hover:shadow-[0_0_20px_var(--glow-color)] hover:border-none hover:-translate-y-2 sm:w-auto "
+              className="group flex h-full flex-col justify-between rounded-[15px] bg-[var(--color-background)] border border-[var(--color-text-light)]/30  p-6 transition-transform duration-300 hover:shadow-[0_0_20px_var(--glow-color)] hover:border-none hover:-translate-y-2 sm:w-auto "
             >
               <div>
                 <div className="flex items-start gap-4">

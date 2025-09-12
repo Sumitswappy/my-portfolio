@@ -100,7 +100,7 @@ const Background = () => {
         type: 'circle',
       },
       size: {
-        value: { min: 1, max: 3 },
+        value: { min: 1, max: 4 },
       },
     },
     detectRetina: true,

@@ -24,19 +24,19 @@ const Hero = () => {
             Final-year MCA student crafting scalable REST APIs and full-stack applications.
           </p>
           <div className="flex flex-row items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
-            <a href="#contact" className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-[var(--color-text-light)] transition hover:bg-[var(--color-accent-3)] hover:-translate-y-1 hover:text-black sm:w-auto hover:border-none hover:shadow-[0_0_0_var(--glow-color)]">
+            <a href="#contact" className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 bg-[var(--color-background)]/60 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-[var(--color-text-light)] transition hover:bg-[var(--color-accent-3)] hover:-translate-y-1 hover:text-black sm:w-auto hover:border-none hover:shadow-[0_0_0_var(--glow-color)]">
               <FaPaperPlane />
               <span>Contact Me !!</span>
             </a>
-            <a href="/Sumit-Sarkar-Resume.pdf" download className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-[var(--color-text-light)] transition hover:bg-[var(--color-accent-3)] hover:-translate-y-1 hover:text-black sm:w-auto hover:border-none hover:shadow-[0_0_0_var(--glow-color)]">
+            <a href="/Sumit-Sarkar-Resume.pdf" download className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 bg-[var(--color-background)]/60 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-[var(--color-text-light)] transition hover:bg-[var(--color-accent-3)] hover:-translate-y-1 hover:text-black sm:w-auto hover:border-none hover:shadow-[0_0_0_var(--glow-color)]">
               <FaDownload />
               <span>Download Resume</span>
             </a>
           </div>
         </div>
         <div className="relative flex h-[400px] w-full items-end justify-center">
-          <div className="absolute bottom-0 h-[320px] w-[320px] rounded-full border-[10px] border-[var(--color-accent-3)] z-10 shadow-[0_0_50px_var(--glow-color)]"></div>
-          <div className="relative z-20">
+          <div className="absolute bg-[var(--color-background)] bottom-0 h-[320px] w-[320px] rounded-full border-[10px] border-[var(--color-accent-3)] z-10 shadow-[0_0_50px_var(--glow-color)]"></div>
+          <div className="relative z-20   ">
             <Image
               src="/sumit.png"
               alt="Sumit Sarkar"

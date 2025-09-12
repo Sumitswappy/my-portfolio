@@ -42,7 +42,7 @@ const Projects = () => {
       <div className="grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <Link href={project.link} key={project.title} target="_blank" rel="noopener noreferrer" className="block h-full">
-            <div className="group flex h-full flex-col rounded-[25px]  bg-main-gray shadow-[0_0_20px_var(--glow-color)]  transition-transform duration-300 hover:bg-[var(--color-accent-3)] hover:-translate-y-2 sm:w-auto hover:shadow-[0_0_0_var(--glow-color)]">
+            <div className="group flex h-full flex-col rounded-[25px]  bg-[var(--color-background)] border border-[var(--color-text-light)]/30 hover:shadow-[0_0_20px_var(--glow-color)]  transition-transform duration-300 hover:bg-[var(--color-accent-3)] hover:-translate-y-2 sm:w-auto hover:shadow-[0_0_0_var(--glow-color)]">
               <div className="rounded-[15px] relative h-48 w-full overflow-hidden">
                 <Image src={project.image} alt={`Screenshot of ${project.title}`} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
               </div>

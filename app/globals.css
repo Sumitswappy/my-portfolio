@@ -6,17 +6,19 @@ html {
   scroll-behavior: smooth;
 }
 
-/* :root defines the default theme (Orange Light Theme) */
+/* :root defines the default theme (Midnight Theme) */
 :root {
-  --color-accent: #F97316;
-  --color-accent-2: #EA580C;
-  --color-accent-3: #feeaa4;
-  --color-accent-4: #f89000;
-  --color-text-light: #753c00;  /* Dark text for light background */
-  --color-text-dark: #fb540c;   /* Dark text for light background */
-  --color-background: #ffffff;
-  --glow-color: #F97316;
+ --color-accent: #3b82f6; /* A bright, vibrant blue */
+--color-accent-2: #2563eb; /* A slightly darker blue */
+--color-accent-3: #d0e3fc; /* A light, almost white blue */
+--color-accent-4: #456ddb; /* A dark blue for text */
+--color-text-light: #f3f4f6; /* A light gray for headlines */
+--color-text-dark: #aacefe; /* A light blue for secondary text */
+ --color-background: #030408; /* Midnight blue */
+ --color-background2:#030408; 
+--glow-color: #3b82f6; /* Glow color for the theme */
 }
+
 
 /* Default Dark Theme (Blue) */
 /* html[data-theme='dark'] {
@@ -35,23 +37,25 @@ html[data-theme='forest'] {
   --color-accent: #00FA53;
   --color-accent-2: #00CC44;
   --color-accent-3: #E0FFE5;
-  --color-accent-4: #00882C;
+  --color-accent-4: #02bd3d;
   --color-text-light: #ffffff;
   --color-text-dark: #B9FFC4;
   --color-background: #001A03;
+  --color-background2: #001A03; 
   --glow-color: #00FA53;
 }
 
-/* Midnight Theme */
-html[data-theme='midnight'] {
-  --color-accent: #3b82f6;
-  --color-accent-2: #252feb;
-  --color-accent-3: #eff6ff;
-  --color-accent-4: #1d4ed8;
-  --color-text-light: #f3f4f6;
-  --color-text-dark: #63a4fa;
-  --color-background: #000000;
-  --glow-color: #2f52fe;
+/* Orange Light Theme */
+ html[data-theme='light'] {
+  --color-accent: #F97316;
+  --color-accent-2: #EA580C;
+  --color-accent-3: #f9de57;
+  --color-accent-4: #f89000;
+  --color-text-light: #753c00;  /* Dark text for light background */
+  --color-text-dark: #fb540c;   /* Dark text for light background */
+  --color-background: #feffdf;
+  --color-background2: #ffffff; /* Lighter background for contrast */
+  --glow-color: #fe6a00;
 }
 
 /* This is the crucial fix: Body styles now use the theme variables */

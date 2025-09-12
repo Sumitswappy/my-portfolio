@@ -1,16 +1,24 @@
 'use client';
 
-import { useState } from 'react';
-import { useTheme } from '../contexts/ThemeContext'; // Make sure the path is correct
-import { FaSun, FaTree, FaMoon, FaPalette, FaTint } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { useTheme } from '../contexts/ThemeContext';
+import { FaSun, FaTree, FaMoon, FaPalette} from 'react-icons/fa6';
 import { AnimatePresence, motion } from 'framer-motion';
 
+type ThemeType = 'midnight' | 'forest' | 'light';
+
 const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme(); // Use the global context
+  const { theme, setTheme } = useTheme() as { theme: ThemeType, setTheme: (t: ThemeType) => void };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleTheme = (newTheme: string) => {
-    setTheme(newTheme); // This now updates the global state
+  const themeIcons = {
+    light: <FaSun size={20} />,
+    forest: <FaTree size={20} />,
+    midnight: <FaMoon size={20} />,
+  };
+
+  const toggleTheme = (newTheme: ThemeType) => {
+    setTheme(newTheme);
     setIsMenuOpen(false);
   };
 
@@ -29,18 +37,18 @@ const ThemeToggle = () => {
             transition={{ type: 'spring', duration: 0.5, bounce: 0.4 }}
             className="flex flex-col items-center gap-2"
           >
-            <button
-              onClick={() => toggleTheme('light')}
+                <button
+              onClick={() => toggleTheme('midnight')}
               className={`flex items-center justify-center rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110 ${
-                theme === 'light'
+                theme === 'midnight'
                   ? 'bg-accent text-[var(--color-accent-4)] shadow-[0_0_20px_var(--glow-color)]'
                   : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
               }`}
-              title="Light Theme"
+              title="Midnight Theme"
             >
-              <FaSun size={20} />
+              <FaMoon size={20} />
             </button>
-        
+
             <button
               onClick={() => toggleTheme('forest')}
               className={`flex items-center justify-center rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110 ${
@@ -52,30 +60,30 @@ const ThemeToggle = () => {
             >
               <FaTree size={20} />
             </button>
+        
             <button
-              onClick={() => toggleTheme('midnight')}
+              onClick={() => toggleTheme('light')}
               className={`flex items-center justify-center rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110 ${
-                theme === 'midnight'
+                theme === 'light'
                   ? 'bg-accent text-[var(--color-accent-4)] shadow-[0_0_20px_var(--glow-color)]'
                   : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
               }`}
-              title="Midnight Theme"
+              title="Light Theme"
             >
-              <FaMoon size={20} />
+              <FaSun size={20} />
             </button>
           </motion.div>
         )}
       </AnimatePresence>
       <button
         onClick={handleToggleMenu}
-        className={`flex items-center justify-center rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110 ${
-          isMenuOpen
-            ? 'bg-accent text-[var(--color-accent-4)] shadow-[0_0_20px_var(--glow-color)]'
-            : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
-        }`}
+        // --- THIS IS THE CORRECTED SECTION ---
+        // The button's style now always reflects the active theme's accent colors,
+        // removing the hardcoded gray background.
+        className="flex items-center justify-center rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110 bg-[var(--color-background)] text-[var(--color-accent-4)] shadow-[0_0_20px_var(--glow-color)]"
         title="Toggle Themes"
       >
-        <FaPalette size={20} />
+        {themeIcons[theme] || <FaPalette size={20} />}
       </button>
     </div>
   );
