@@ -10,18 +10,35 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
-      // Default to the light theme
-      return localStorage.getItem('theme') || 'midnight';
-    }
-    return 'midnight';
-  });
+  const [theme, setTheme] = useState('light'); // Always start with a consistent default theme
 
   useEffect(() => {
-    // Set the data-theme attribute on the <html> element
+    // Check for a user-saved theme in the session.
+    const savedTheme = sessionStorage.getItem('theme'); // <-- Changed from localStorage
+    if (savedTheme) {
+      setTheme(savedTheme);
+      return;
+    }
+
+    // Calculate the theme based on fixed Indian Standard Time.
+    const hourIST = parseInt(
+      new Date().toLocaleTimeString('en-US', {
+        timeZone: 'Asia/Kolkata',
+        hour: '2-digit',
+        hour12: false,
+      }),
+      10
+    );
+
+    const isNightTime = hourIST >= 17 || hourIST < 5;
+    setTheme(isNightTime ? 'dark' : 'light');
+
+  }, []);
+
+  useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
+    // Save the theme choice to the session.
+    sessionStorage.setItem('theme', theme); // <-- Changed from localStorage
   }, [theme]);
 
   return (

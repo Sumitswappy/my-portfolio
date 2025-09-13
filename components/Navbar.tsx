@@ -150,7 +150,7 @@ const Navbar = () => {
         <div className="border-t border-[var(--color-accent-4)] bg-[var(--color-background)]/80 backdrop-blur-xl">
           <nav className="flex flex-col items-center gap-4 py-4 font-mono">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} onClick={() => setIsMenuOpen(false)} className={`px-3 py-2 ${activeSection === link.href ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-dark)]'}`}>
+              <Link key={link.href} href={link.href} onClick={() => setIsMenuOpen(false)} className={`px-3 py-2 ${activeSection === link.href ? 'text-[var(--color-text-light)]' : 'text-[var(--color-text-dark)]'}`}>
                 {link.label}
               </Link>
             ))}
