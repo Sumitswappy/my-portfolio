@@ -112,7 +112,7 @@ const Navbar = () => {
           {isClient && (
             // --- THEME CHANGE #3: Date/Time text and border now use theme colors ---
             <div className="items-center gap-2  border-l border-[var(--color-accent-4)] pl-4 text-xs text-[var(--color-text-light)] sm:flex">
-              <div className=' text-left bg-[var(--color-background)] rounded-full py-1 px-4 shadow-[0_0_20px_var(--glow-color)]'>
+              <div className=' text-left bg-[var(--color-background)] border border-border-gray rounded-full py-1 px-4 shadow-[0_0_20px_var(--glow-color)]'>
                  {/* --- THEME CHANGE #4: Icons now use theme's accent color --- */}
                 <div className="flex items-center gap-2"><FaRegCalendarAlt className="text-[var(--color-accent)]" /><span>{currentDateTime.toLocaleDateString('en-US', dateOptions)}</span></div>
                 <div className="flex items-center gap-2"><FaRegClock className="text-[var(--color-accent)]" /><span>{currentDateTime.toLocaleTimeString('en-US', timeOptions)}</span></div>
