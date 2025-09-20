@@ -28,7 +28,7 @@ const Hero = () => {
               <FaPaperPlane />
               <span>Contact Me !!</span>
             </a>
-            <a href="/Sumit-Sarkar-Resume.pdf" download className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 bg-[var(--color-background)]/60 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-[var(--color-text-light)] transition hover:bg-[var(--color-accent-3)] hover:-translate-y-1 hover:text-black sm:w-auto hover:border-none hover:shadow-[0_0_0_var(--glow-color)]">
+            <a href="/Resume.pdf" download className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 bg-[var(--color-background)]/60 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-[var(--color-text-light)] transition hover:bg-[var(--color-accent-3)] hover:-translate-y-1 hover:text-black sm:w-auto hover:border-none hover:shadow-[0_0_0_var(--glow-color)]">
               <FaDownload />
               <span>Download Resume</span>
             </a>
