@@ -98,12 +98,12 @@ const Navbar = () => {
         <div className="flex flex-shrink-0 items-center gap-4">
           <Link href="#home" className="flex items-center gap-2">
             {/* --- THEME CHANGE #2: Logo background now uses theme's accent color --- */}
-            <div className="flex h-11 w-11 items-center justify-center rounded-full border-[0px] border-[var(--color-accent-2)] bg-[var(--color-accent)]">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full border-[2px] border-[var(--glow-color)] bg-[var(--color-accent)]">
               <Image
                 src={logoImage}
                 alt="My Logo"
-                width={114}
-                height={114}
+                width={113}
+                height={113}
                 className="rounded-full"
               />
             </div>

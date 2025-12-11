@@ -83,7 +83,7 @@ const ThemeToggle = () => {
         className="flex items-center justify-center rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110 bg-[var(--color-background)] text-[var(--color-accent-4)] shadow-[0_0_20px_var(--glow-color)]"
         title="Toggle Themes"
       >
-        {themeIcons[theme] || <FaPalette size={20} />}
+        {themeIcons[theme] || <FaMoon size={20} />}
       </button>
     </div>
   );

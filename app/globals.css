@@ -8,15 +8,14 @@ html {
 
 /* :root defines the default theme (Midnight Theme) */
 :root {
- --color-accent: #3b82f6; /* A bright, vibrant blue */
---color-accent-2: #2563eb; /* A slightly darker blue */
---color-accent-3: #d0e3fc; /* A light, almost white blue */
---color-accent-4: #456ddb; /* A dark blue for text */
---color-text-light: #eff4ff; /* A light gray for headlines */
---color-text-dark: #aacefe; /* A light blue for secondary text */
- --color-background: #030408; /* Midnight blue */
- --color-background2:#030408; 
---glow-color: #3b82f6; /* Glow color for the theme */
+--color-accent: #004ef7;
+  --color-accent-2: #03a1fd;
+  --color-accent-3: #e0f0ff;
+  --color-accent-4: #0035d4;
+  --color-text-light: #ffffff;
+  --color-text-dark: #2d9dff;
+  --color-background: #070315ff;
+  --glow-color: #00c6f7;/* Glow color for the theme */
 }
 
 
