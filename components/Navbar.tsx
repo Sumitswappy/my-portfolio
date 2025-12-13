@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaRegCalendarAlt, FaRegClock, FaBars, FaTimes } from 'react-icons/fa';
-import logoImage from '/public/sumit2.png';
+
 
 const navLinks = [
   { href: '#about-me', label: '#About-me' },
@@ -100,7 +100,7 @@ const Navbar = () => {
             {/* --- THEME CHANGE #2: Logo background now uses theme's accent color --- */}
             <div className="flex h-11 w-11 items-center justify-center rounded-full border-[2px] border-[var(--glow-color)] bg-[var(--color-accent)]">
               <Image
-                src={logoImage}
+                src="/sumit2.png"
                 alt="My Logo"
                 width={113}
                 height={113}
