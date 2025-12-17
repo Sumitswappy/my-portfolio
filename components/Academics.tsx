@@ -14,7 +14,7 @@ const academicsData = [
     university: 'Techno India College of Technology',
     degree: 'Bachelors of Computer Application',
     dates: 'Sept 2021 - July 2024',
-    grade: 'CGPA: 8.85',
+    grade: 'CGPA: 8.8',
     link: '/provisionalcerti.pdf',
   },
   {
