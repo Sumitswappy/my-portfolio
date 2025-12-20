@@ -2,13 +2,25 @@
 
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
-import { FaDownload, FaPaperPlane } from 'react-icons/fa6'; 
+import { FaDownload, FaPaperPlane } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="py-38 md:py-24" id="home">
-      <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-        <div className="space-y-6 text-center md:text-left">
+    <section className="relative min-h-[85vh] flex items-center py-20 md:py-24" id="home">
+      <div className="container mx-auto px-6 grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+        
+        {/* Text Content with Slide-in Animation */}
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="space-y-6 text-center md:text-left"
+        >
+          <div className="inline-block px-3 py-1 rounded-full bg-[var(--color-accent-3)]/20 text-[var(--color-accent-1)] text-xs font-bold tracking-widest uppercase mb-2">
+            Portfolio 2025
+          </div>
+          
           <TypeAnimation
             sequence={[
               'I am a tech enthusiast!', 3500,
@@ -17,37 +29,60 @@ const Hero = () => {
             ]}
             wrapper="h1"
             speed={60}
-            className="text-3xl font-bold tracking-tighter text-[var(--color-text-light)] sm:text-4xl lg:text-5xl"
+            className="text-4xl font-extrabold tracking-tight text-[var(--color-text-light)] sm:text-5xl lg:text-6xl block min-h-[70px]"
             repeat={Infinity}
           />
-          <p className="text-slate-400 dark:text-[var(--color-text-dark)]">
-            Final-year MCA student crafting scalable REST APIs and full-stack applications.
+          
+          <p className="max-w-lg text-lg text-slate-500 dark:text-[var(--color-text-dark)] leading-relaxed">
+            Final-year <span className="font-semibold text-[var(--color-text-light)]">MCA student</span> crafting scalable REST APIs and full-stack applications with modern tech stacks.
           </p>
-          <div className="flex flex-row items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
-            <a href="#contact" className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 bg-[var(--color-background)]/60 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-[var(--color-text-light)] transition hover:bg-[var(--color-accent-3)] hover:-translate-y-1 hover:text-black sm:w-auto hover:border-none hover:shadow-[0_0_0_var(--glow-color)]">
-              <FaPaperPlane />
+
+          <div className="flex flex-col items-center gap-4 sm:flex-row md:justify-start pt-4">
+            {/* Primary Action - Contact */}
+            <a href="#contact" 
+               className="group relative flex w-full items-center justify-center gap-2 rounded-xl bg-[var(--color-accent-3)] px-8 py-3.5 text-black font-bold transition-all hover:scale-105 hover:shadow-[0_0_20px_var(--glow-color)] sm:w-auto">
+              <FaPaperPlane className="group-hover:rotate-12 transition-transform" />
               <span>Contact Me !!</span>
             </a>
-            <a href="/Resume.pdf" download className="rounded-[8px] inline-flex w-full items-center justify-center gap-2 bg-[var(--color-background)]/60 border border-border-gray px-4 py-2 shadow-[0_0_10px_var(--glow-color)] text-[var(--color-text-light)] transition hover:bg-[var(--color-accent-3)] hover:-translate-y-1 hover:text-black sm:w-auto hover:border-none hover:shadow-[0_0_0_var(--glow-color)]">
-              <FaDownload />
+
+            {/* Secondary Action - Glassmorphism Resume */}
+            <a href="/Resume.pdf" download 
+               className="group flex w-full items-center justify-center gap-2 rounded-xl border border-border-gray bg-white/40 backdrop-blur-md px-8 py-3.5 text-[var(--color-text-light)] font-bold transition-all hover:bg-white/60 sm:w-auto">
+              <FaDownload className="group-hover:translate-y-0.5 transition-transform" />
               <span>Download Resume</span>
             </a>
           </div>
-        </div>
-        <div className="relative flex h-[400px] w-full items-end justify-center">
-          <div className="absolute bg-[var(--color-background)] bottom-0 h-[320px] w-[320px] rounded-full border-[10px] border-[var(--color-accent-3)] z-10 shadow-[0_0_50px_var(--glow-color)]"></div>
-          <div className="relative z-20   ">
-            <Image
-              src="/sumit.png"
-              alt="Sumit Sarkar"
-              width={320}
-              height={320}
-              className="rounded-full object-cover"
-            />
+        </motion.div>
+
+        {/* Original Circular Image with Glow Refinements */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="relative flex justify-center items-center"
+        >
+          {/* Subtle Rotating Background Glow */}
+          <div className="absolute h-72 w-72 rounded-full bg-[var(--color-accent-3)] opacity-30 blur-[60px] animate-pulse"></div>
+          
+          <div className="relative group">
+            {/* The Animated Border Ring */}
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[var(--color-accent-3)] to-[var(--glow-color)] opacity-75 blur-sm group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+            
+            <div className="relative h-[300px] w-[300px] sm:h-[380px] sm:w-[380px] rounded-full border-[8px] border-[var(--color-accent-3)] overflow-hidden shadow-[0_0_30px_var(--glow-color)] z-10">
+              <Image
+                src="/pixar.png"
+                alt="Sumit Sarkar"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                priority
+              />
+            </div>
           </div>
-        </div>
+        </motion.div>
+
       </div>
     </section>
   );
 };
+
 export default Hero;

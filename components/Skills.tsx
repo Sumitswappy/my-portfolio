@@ -15,6 +15,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiTypescript,
+  SiPostgresql,
 } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 
@@ -24,6 +25,7 @@ const allSkills = [
   { name: 'Java', icon: FaJava, color: 'text-[#F89820]' },
   { name: 'Python', icon: FaPython, color: 'text-[#3776AB]' },
   { name: 'SQL', icon: FaDatabase, color: 'text-[var(--color-text-dark)]' }, // Kept accent for generic icon
+  { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-[#336791]' },
   { name: 'JavaScript', icon: IoLogoJavascript, color: 'text-[#F7DF1E]' },
   { name: 'SAP ABAP', icon: SiSap, color: 'text-[#008FD3]' },
   { name: 'Spring Boot', icon: SiSpringboot, color: 'text-[#6DB33F]' },

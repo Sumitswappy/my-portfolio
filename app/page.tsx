@@ -12,6 +12,7 @@ import Navbar from '@/components/Navbar'; // Import your existing Navbar compone
 import Background from '@/components/Background';
 import ThemeToggle from '@/components/ThemeToggle'; // Import the new theme toggle component
 import Skills from '@/components/Skills';
+import TechStackMarquee from '@/components/TechStackMarquee';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <div className="container mx-auto max-w-5xl px-4">
           <Hero />
           <AboutMe />
+          <TechStackMarquee />
           <Projects />
           <Skills />
           <Certifications />
