@@ -35,12 +35,15 @@ const AboutMe = () => {
           </p>
         </motion.div>
         
-        <h2 className="text-4xl font-bold tracking-tight text-[var(--color-text-light)] sm:text-6xl">
+        <motion.h2
+         initial={{ opacity: 0, y: 20 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         className="text-4xl font-bold tracking-tight text-[var(--color-text-light)] sm:text-6xl">
           I&apos;m Sumit, a <br />
           <span className="pb-2 inline-block bg-gradient-to-r from-[var(--color-accent-3)] to-[var(--color-accent-4)] bg-clip-text text-transparent italic">
             Software developer
           </span>
-        </h2>
+        </motion.h2>
       </div>
 
       <div className="grid grid-cols-1 items-start gap-16 md:grid-cols-2">

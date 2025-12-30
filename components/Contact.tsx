@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaEnvelope, FaMapMarkerAlt, FaShareAlt, FaLinkedin, FaGithub, FaCheck, FaCopy } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaShareAlt, FaLinkedin, FaGithub, FaCheck, FaCopy, FaExternalLinkAlt } from 'react-icons/fa';
 import { FiPhone } from 'react-icons/fi';
 import Link from 'next/link';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
 const contactDetails = [
   {
@@ -32,6 +33,8 @@ const contactDetails = [
     links: [
       { name: 'LinkedIn', href: 'https://www.linkedin.com/in/sumit-sarkar-0229b4222/', icon: <FaLinkedin /> },
       { name: 'GitHub', href: 'https://github.com/Sumitswappy', icon: <FaGithub /> },
+      { name: 'Instagram', href: 'https://www.instagram.com/schrodinger98765/', icon: <FaInstagram /> },
+      { name: 'Facebook', href: 'https://www.facebook.com/schrodinger98765', icon: <FaFacebook /> },
     ],
   },
 ];
@@ -44,7 +47,7 @@ const Contact = () => {
     setCopiedText(text);
     setTimeout(() => setCopiedText(null), 2000);
   };
-
+const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('59, Ghoshpara Lane, Bhadrakali, Uttarpara, Hooghly - 712232, West Bengal, India')}`;
   return (
     <section id="contact" className="relative py-24 md:py-32 overflow-visible">
       {/* Dynamic Background Glow */}
@@ -95,7 +98,7 @@ const Contact = () => {
           {/* Action Button positioned BELOW Title */}
           <button 
             onClick={() => handleCopy(item.value!)}
-            className="flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20 text-[var(--color-accent)] text-xs font-bold transition-all hover:bg-[var(--color-accent)] hover:text-black mb-1"
+            className="flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20 text-[var(--color-accent)] text-xs font-bold transition-all hover:bg-[var(--color-accent-3)] hover:text-black mb-1"
           >
             <AnimatePresence mode='wait'>
               {copiedText === item.value ? (
@@ -111,23 +114,42 @@ const Contact = () => {
           </button>
 
           {/* Actual Value */}
-          <p className="text-[var(--color-text-light)] font-medium text-sm md:text-base break-all">
+          <p className="text-[var(--color-text-light)] font-medium text-sm md:text-base break-all hover:text-[var(--color-accent)]">
             {item.value}
           </p>
         </>
       ) : item.type === 'social' ? (
-        <div className="flex justify-center gap-4 mt-2">
+        <div className="flex flex-wrap justify-center gap-4 mt-2">
           {item.links?.map((link, i) => (
             <Link key={i} href={link.href} target="_blank" className="p-4 rounded-full text-3xl bg-white/5 hover:bg-[var(--color-accent)] hover:text-black transition-all">
               {link.icon}
             </Link>
           ))}
         </div>
-      ) : (
-        <p className="text-[var(--color-text-light)] font-medium text-center">
-          {item.value}
-        </p>
-      )}
+     /* Replace the existing (item.value) paragraph at the bottom of your loop with this: */
+
+) : item.type === 'map' ? (
+  <a 
+    href={googleMapsUrl}
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="group/map flex flex-col items-center gap-2"
+  >
+    {/* "Fancy" Map Badge matching your "Copy" buttons */}
+    <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-text-dark)]/10 border border-[var(--color-text-dark)]/20 text-[var(--color-text-dark)] text-[10px] font-bold transition-all hover:bg-[var(--color-accent-3)] hover:text-black mb-1">
+      <FaExternalLinkAlt size={10} />
+      <span>VIEW ON MAP</span>
+    </div>
+    
+    <p className="text-[var(--color-text-light)] font-medium text-sm md:text-base leading-relaxed transition-colors group-hover/map:text-[var(--color-accent)]">
+      {item.value}
+    </p>
+  </a>
+) : (
+  <p className="text-[var(--color-text-light)] font-medium text-center">
+    {item.value}
+  </p>
+)}
     </div>
   </motion.div>
 ))}
