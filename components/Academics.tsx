@@ -119,7 +119,7 @@ const Academics = () => {
                               {item.grade}
                             </p>
                           </div>
-                          <span className="flex items-center gap-2 text-sm text-[var(--color-accent-3)] opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                          <span className="flex items-center gap-2 text-sm text-[var(--color-text-dark)] opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
                             <span className="font-bold uppercase tracking-tighter text-[10px]">View Document</span>
                             <FaEye size={18} />
                           </span>
