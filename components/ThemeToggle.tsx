@@ -80,7 +80,7 @@ const ThemeToggle = () => {
         // --- THIS IS THE CORRECTED SECTION ---
         // The button's style now always reflects the active theme's accent colors,
         // removing the hardcoded gray background.
-        className="flex items-center justify-center rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110 bg-[var(--color-background)] text-[var(--color-accent-4)] shadow-[0_0_20px_var(--glow-color)]"
+        className="flex items-center justify-center rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110 bg-gradient-to-b from-[var(--color-background)] to-[var(--color-background2)] text-[var(--color-accent-4)] shadow-[0_0_20px_var(--glow-color)]"
         title="Toggle Themes"
       >
         {themeIcons[theme] || <FaMoon size={20} />}

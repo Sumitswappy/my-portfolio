@@ -42,7 +42,7 @@ html[data-theme='light'] {
   --color-text-light: #753c00;  /* Dark text for light background */
   --color-text-dark: #fb540c;   /* Dark text for light background */
   --color-background: #c0f3ff;  /* Gradient Start */
-  --color-background2: #fff5c7; /* Gradient End */
+  --color-background2: #fbffc7; /* Gradient End */
   --glow-color: #fe6a00;
 }
 
