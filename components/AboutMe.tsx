@@ -40,7 +40,7 @@ const AboutMe = () => {
          whileInView={{ opacity: 1, y: 0 }}
          className="text-4xl font-bold tracking-tight text-[var(--color-text-light)] sm:text-6xl">
           I&apos;m Sumit, a <br />
-          <span className="pb-2 inline-block bg-gradient-to-r from-[var(--color-accent-3)] to-[var(--color-accent-4)] bg-clip-text text-transparent italic">
+          <span className="pb-2 inline-block bg-gradient-to-r from-[var(--color-accent-4)] to-[var(--color-accent-3)] bg-clip-text text-transparent italic">
             Software developer
           </span>
         </motion.h2>
