@@ -6,12 +6,12 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import Link from 'next/link';
 
 const academicsData = [
-  {
-    university: 'Kalinga Institute of Industrial Technology',
-    degree: 'Masters of Computer Application',
-    dates: 'Sept 2024 - Aug 2026',
-    grade: 'CGPA: 9.10',
-    link: '/2NDSEM.pdf',
+ {
+    university: 'Sunrise English Medium School',
+    degree: 'ISC (Class 12)',
+    dates: 'May 2020 - July 2021',
+    grade: 'Percentage: 88.5%',
+    link: '/12Res.pdf',
   },
   {
     university: 'Techno India College of Technology',
@@ -20,13 +20,14 @@ const academicsData = [
     grade: 'CGPA: 8.8',
     link: '/provisionalcerti.pdf',
   },
-  {
-    university: 'Sunrise English Medium School',
-    degree: 'ISC (Class 12)',
-    dates: 'May 2020 - July 2021',
-    grade: 'Percentage: 88.5%',
-    link: '/12Res.pdf',
+   {
+    university: 'Kalinga Institute of Industrial Technology',
+    degree: 'Masters of Computer Application',
+    dates: 'Sept 2024 - Aug 2026',
+    grade: 'CGPA: 9.10',
+    link: '/2NDSEM.pdf',
   },
+  
 ];
 
 const Academics = () => {
