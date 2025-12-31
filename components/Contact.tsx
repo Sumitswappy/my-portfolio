@@ -121,7 +121,7 @@ const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeU
       ) : item.type === 'social' ? (
         <div className="flex flex-wrap justify-center gap-4 mt-2">
           {item.links?.map((link, i) => (
-            <Link key={i} href={link.href} target="_blank" className="p-4 rounded-full text-3xl bg-white/5 hover:bg-[var(--color-accent)] hover:text-black transition-all">
+            <Link key={i} href={link.href} target="_blank" className="p-4 rounded-full text-3xl bg-white/5 hover:bg-[var(--color-accent-3)] hover:text-black transition-all">
               {link.icon}
             </Link>
           ))}

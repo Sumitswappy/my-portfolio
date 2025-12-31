@@ -66,7 +66,7 @@ const Hero = () => {
           
           <div className="relative group">
             {/* The Animated Border Ring */}
-            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[var(--color-accent-3)] to-[var(--glow-color)] opacity-75 blur-sm group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[var(--color-accent-3)] to-[var(--color-accent-4)] opacity-100 blur-sm group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
             
             <div className="relative h-[300px] w-[300px] sm:h-[380px] sm:w-[380px] rounded-full border-[8px] border-[var(--color-accent-3)] overflow-hidden shadow-[0_0_30px_var(--glow-color)] z-10">
               <Image

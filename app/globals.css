@@ -14,9 +14,9 @@ html {
   --color-accent-4: #0035d4;
   --color-text-light: #ffffff;
   --color-text-dark: #2d9dff;
-  --color-background: #070315ff;
+  --color-background: rgb(0, 0, 0);
   /* Since Midnight is solid, we set background2 to the same as background */
-  --color-background2: #070315ff;
+  --color-background2: rgb(12, 6, 37);
   --glow-color: #00c6f7;
 }
 
@@ -43,7 +43,7 @@ html[data-theme='light'] {
   --color-text-dark: #fb540c;   /* Dark text for light background */
   --color-background: #c0f3ff;  /* Gradient Start */
   --color-background2: #fbffc7; /* Gradient End */
-  --glow-color: #fe6a00;
+  --glow-color: #f6fe00;
 }
 
 /* Global Body Styles */

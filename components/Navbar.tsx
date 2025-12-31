@@ -118,7 +118,7 @@ const Navbar = () => {
           
           {isClient && (
             <div className="hidden items-center gap-2 border-l border-[var(--color-accent-4)] pl-4 text-xs text-[var(--color-text-light)] sm:flex">
-              <div className='text-left bg-[var(--color-background)] border border-border-gray rounded-full py-1 px-4 shadow-[0_0_10px_var(--glow-color)]'>
+              <div className='text-left bg-[var(--color-background)] border border-border-gray rounded-full py-1 px-4 shadow-[0_4px_13px_var(--color-accent)]'>
                 <div className="flex items-center gap-2">
                   <FaRegCalendarAlt className="text-[var(--color-accent)]" />
                   <span>{currentDateTime.toLocaleDateString('en-US', dateOptions)}</span>
